@@ -1,0 +1,8 @@
+Исходные тексты дотупны на svn сервере по адресу: 
+  http://svn.shamangrad.net/FBDataSet/trunk/
+
+Статьи доступны по адресу:
+  http://shamangrad.net/catalog.php?act=all&prj=FBDataSet
+
+Рускоязычное обсуждение на форуме freepascal.ru в разделе "Программирование/Сторонние средства"
+  http://freepascal.ru/forum/viewforum.php?f=6

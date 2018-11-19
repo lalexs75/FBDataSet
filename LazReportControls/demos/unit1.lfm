@@ -1,0 +1,176 @@
+object Form1: TForm1
+  Left = 445
+  Height = 306
+  Top = 246
+  Width = 372
+  Caption = 'UIB LazReport test'
+  ClientHeight = 306
+  ClientWidth = 372
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.9.0.0'
+  object Button1: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = CheckBox1
+    AnchorSideTop.Side = asrBottom
+    Left = 136
+    Height = 36
+    Top = 216
+    Width = 101
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'Create report'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object CheckBox1: TCheckBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Button2
+    AnchorSideTop.Side = asrBottom
+    Left = 138
+    Height = 24
+    Top = 186
+    Width = 97
+    BorderSpacing.Around = 6
+    Caption = 'CheckBox1'
+    TabOrder = 1
+  end
+  object Button2: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Edit3
+    AnchorSideTop.Side = asrBottom
+    Left = 152
+    Height = 36
+    Top = 144
+    Width = 69
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'Connect'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 6
+    Height = 20
+    Top = 6
+    Width = 59
+    BorderSpacing.Around = 6
+    Caption = 'Database'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Edit1
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 20
+    Top = 75
+    Width = 69
+    BorderSpacing.Around = 6
+    Caption = 'User name'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Edit2
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Edit1
+    AnchorSideTop.Side = asrBottom
+    Left = 178
+    Height = 20
+    Top = 75
+    Width = 61
+    BorderSpacing.Around = 6
+    Caption = 'Password'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 12
+    Height = 37
+    Top = 32
+    Width = 354
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    TabOrder = 3
+    Text = '127.0.0.1:employee'
+  end
+  object Edit2: TEdit
+    AnchorSideLeft.Control = Label2
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
+    Left = 12
+    Height = 37
+    Top = 101
+    Width = 160
+    BorderSpacing.Around = 6
+    TabOrder = 4
+    Text = 'sysdba'
+  end
+  object Edit3: TEdit
+    AnchorSideLeft.Control = Label3
+    AnchorSideTop.Control = Label3
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 184
+    Height = 37
+    Top = 101
+    Width = 182
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    TabOrder = 5
+    Text = 'masterkey'
+  end
+  object UIBDataBase1: TUIBDataBase
+    Params.Strings = (
+      'sql_dialect=3'
+      'lc_ctype=NONE'
+      'user_name=sysdba'
+      'password=masterkey'
+    )
+    DatabaseName = '127.0.0.1:employee'
+    CharacterSet = csNONE
+    UserName = 'sysdba'
+    PassWord = 'masterkey'
+    LibraryName = 'libfbclient.so'
+    AfterConnect = UIBDataBase1AfterConnect
+    AllowStreamedConnected = False
+    Left = 216
+    Top = 13
+  end
+  object UIBTransaction1: TUIBTransaction
+    DataBase = UIBDataBase1
+    Options = [tpNowait, tpReadCommitted, tpRecVersion]
+    Left = 251
+    Top = 13
+  end
+  object frReport1: TfrReport
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    Left = 264
+    Top = 68
+  end
+  object frDesigner1: TfrDesigner
+    Left = 296
+    Top = 68
+  end
+  object LRDialogControls1: TLRDialogControls
+    Left = 331
+    Top = 68
+  end
+  object lrUIBData1: TlrUIBData
+    Left = 264
+    Top = 112
+  end
+end

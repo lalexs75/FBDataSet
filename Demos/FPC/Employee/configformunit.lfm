@@ -1,0 +1,59 @@
+object ConfigForm: TConfigForm
+  Left = 416
+  Height = 372
+  Top = 291
+  Width = 403
+  ActiveControl = ListBox1
+  Caption = 'Config...'
+  ClientHeight = 372
+  ClientWidth = 403
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '0.9.29'
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 6
+    Height = 18
+    Top = 6
+    Width = 104
+    BorderSpacing.Around = 6
+    Caption = 'Select language'
+    ParentColor = False
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 42
+    Top = 324
+    Width = 391
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = '&ОК'
+    HelpButton.Name = 'HelpButton'
+    HelpButton.Caption = '&Справка'
+    CloseButton.Name = 'CloseButton'
+    CloseButton.Caption = '&Закрыть'
+    CloseButton.Enabled = False
+    CancelButton.Name = 'CancelButton'
+    CancelButton.Caption = 'Отмена'
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+  end
+  object ListBox1: TListBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ButtonPanel1
+    Left = 6
+    Height = 288
+    Top = 30
+    Width = 391
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    ItemHeight = 0
+    TabOrder = 1
+    TopIndex = -1
+  end
+end

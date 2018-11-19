@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="7"/>
+    <Units Count="26">
+      <Unit0>
+        <Filename Value="Employee.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Employee"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="3" Y="15"/>
+        <UsageCount Value="40"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="MainUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MainUnit"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="324"/>
+        <CursorPos X="5" Y="338"/>
+        <UsageCount Value="40"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="sprCustomerEditUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="sprCustomerEditForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="sprCustomerEditUnit"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="35"/>
+        <CursorPos X="1" Y="72"/>
+        <UsageCount Value="40"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="sprcustomerfilterunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="sprCustomerFilterForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="sprCustomerFilterUnit"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="33"/>
+        <UsageCount Value="40"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="hlpaboutunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="hlpAboutForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="hlpAboutUnit"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="46"/>
+        <CursorPos X="1" Y="82"/>
+        <UsageCount Value="40"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="lngresourcesunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="lngResourcesUnit"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="12" Y="12"/>
+        <UsageCount Value="38"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="configunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ConfigUnit"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="26"/>
+        <CursorPos X="3" Y="31"/>
+        <UsageCount Value="37"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="configformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ConfigForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ConfigFormUnit"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="35"/>
+        <CursorPos X="1" Y="72"/>
+        <UsageCount Value="37"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="utranslator.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uTranslator"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="45"/>
+        <CursorPos X="37" Y="36"/>
+        <UsageCount Value="34"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../../../../lcl/forms.pp"/>
+        <UnitName Value="Forms"/>
+        <TopLine Value="594"/>
+        <CursorPos X="14" Y="611"/>
+        <UsageCount Value="9"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../../../../../lcl/include/customform.inc"/>
+        <TopLine Value="2223"/>
+        <CursorPos X="3" Y="2225"/>
+        <UsageCount Value="9"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../../../../../lcl/lclversion.pas"/>
+        <UnitName Value="LCLVersion"/>
+        <TopLine Value="4"/>
+        <CursorPos X="1" Y="35"/>
+        <UsageCount Value="9"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../../../../../lcl/interfacebase.pp"/>
+        <UnitName Value="InterfaceBase"/>
+        <TopLine Value="40"/>
+        <CursorPos X="3" Y="57"/>
+        <UsageCount Value="9"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../../../../../lcl/translations.pas"/>
+        <UnitName Value="Translations"/>
+        <TopLine Value="25"/>
+        <CursorPos X="42" Y="45"/>
+        <UsageCount Value="11"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../../../../../lcl/lresources.pp"/>
+        <UnitName Value="LResources"/>
+        <TopLine Value="85"/>
+        <CursorPos X="39" Y="110"/>
+        <UsageCount Value="10"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../../../../../lcl/defaulttranslator.pas"/>
+        <UnitName Value="DefaultTranslator"/>
+        <TopLine Value="195"/>
+        <CursorPos X="31" Y="47"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="/mnt/hgfs/C/lib/src/fpcsrc/packages/fcl-base/src/gettext.pp"/>
+        <UnitName Value="gettext"/>
+        <TopLine Value="144"/>
+        <CursorPos X="3" Y="148"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="../../../../../lcl/include/dbedit.inc"/>
+        <TopLine Value="152"/>
+        <CursorPos X="1" Y="169"/>
+        <UsageCount Value="10"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../../../fbcustomdataset.pas"/>
+        <UnitName Value="fbcustomdataset"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="372"/>
+        <CursorPos X="43" Y="390"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="/mnt/hgfs/C/lib/src/fpcsrc/packages/fcl-base/src/inifiles.pp"/>
+        <UnitName Value="IniFiles"/>
+        <TopLine Value="88"/>
+        <CursorPos X="3" Y="61"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="../../../FBRecord.inc"/>
+        <TopLine Value="7"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="../../../mydbunit.pas"/>
+        <UnitName Value="mydbunit"/>
+        <TopLine Value="1"/>
+        <CursorPos X="29" Y="23"/>
+        <UsageCount Value="10"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="../../../fbmisc.pas"/>
+        <UnitName Value="fbmisc"/>
+        <TopLine Value="545"/>
+        <CursorPos X="40" Y="557"/>
+        <UsageCount Value="10"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="../../../fbmisc.inc"/>
+        <TopLine Value="1"/>
+        <CursorPos X="30" Y="47"/>
+        <UsageCount Value="10"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="../../../fbparams.pas"/>
+        <UnitName Value="fbparams"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="/usr/local/share/lazarus/components/uib/source/uiblib.pas"/>
+        <UnitName Value="uiblib"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1397"/>
+        <CursorPos X="1" Y="1417"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit25>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="27" HistoryIndex="26">
+      <Position1>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="69" Column="38" TopLine="69"/>
+      </Position1>
+      <Position2>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="72" Column="38" TopLine="72"/>
+      </Position2>
+      <Position3>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="75" Column="38" TopLine="75"/>
+      </Position3>
+      <Position4>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="78" Column="38" TopLine="78"/>
+      </Position4>
+      <Position5>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="80" Column="38" TopLine="80"/>
+      </Position5>
+      <Position6>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="82" Column="1" TopLine="82"/>
+      </Position6>
+      <Position7>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="85" Column="1" TopLine="85"/>
+      </Position7>
+      <Position8>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="88" Column="1" TopLine="88"/>
+      </Position8>
+      <Position9>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="91" Column="1" TopLine="91"/>
+      </Position9>
+      <Position10>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="94" Column="1" TopLine="94"/>
+      </Position10>
+      <Position11>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="97" Column="1" TopLine="97"/>
+      </Position11>
+      <Position12>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="100" Column="1" TopLine="100"/>
+      </Position12>
+      <Position13>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="103" Column="3" TopLine="103"/>
+      </Position13>
+      <Position14>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="106" Column="3" TopLine="106"/>
+      </Position14>
+      <Position15>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="109" Column="3" TopLine="109"/>
+      </Position15>
+      <Position16>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="112" Column="3" TopLine="112"/>
+      </Position16>
+      <Position17>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="115" Column="3" TopLine="115"/>
+      </Position17>
+      <Position18>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="118" Column="3" TopLine="118"/>
+      </Position18>
+      <Position19>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="121" Column="3" TopLine="121"/>
+      </Position19>
+      <Position20>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="124" Column="3" TopLine="124"/>
+      </Position20>
+      <Position21>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="127" Column="3" TopLine="127"/>
+      </Position21>
+      <Position22>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="130" Column="3" TopLine="130"/>
+      </Position22>
+      <Position23>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="133" Column="3" TopLine="133"/>
+      </Position23>
+      <Position24>
+        <Filename Value="configformunit.pas"/>
+        <Caret Line="35" Column="1" TopLine="17"/>
+      </Position24>
+      <Position25>
+        <Filename Value="Employee.lpr"/>
+        <Caret Line="15" Column="3" TopLine="1"/>
+      </Position25>
+      <Position26>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="208" Column="1" TopLine="198"/>
+      </Position26>
+      <Position27>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="343" Column="3" TopLine="327"/>
+      </Position27>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

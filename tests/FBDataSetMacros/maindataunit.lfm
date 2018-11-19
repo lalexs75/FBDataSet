@@ -1,0 +1,88 @@
+object MainData: TMainData
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 259
+  HorizontalOffset = 977
+  VerticalOffset = 264
+  Width = 252
+  object MainDB: TUIBDataBase
+    Params.Strings = (
+      'sql_dialect=3'
+      'lc_ctype=UTF8'
+      'user_name=sysdba'
+      'password=masterkey'
+    )
+    DatabaseName = '127.0.0.1:employee'
+    CharacterSet = csUTF8
+    UserName = 'sysdba'
+    PassWord = 'masterkey'
+    LibraryName = 'libfbclient.so'
+    Connected = True
+    DefTransactionRead = MainTr
+    left = 32
+    top = 16
+  end
+  object MainTr: TUIBTransaction
+    DataBase = MainDB
+    left = 72
+    top = 16
+  end
+  object FBDataSet_WithMacro: TFBDataSet
+    MaxMEMOStringSize = 0
+    AutoUpdateOptions.WhenGetGenID = wgNever
+    AutoUpdateOptions.IncrementBy = 1
+    DefaultFormats.DisplayFormatNumeric = '#,##0.0'
+    DefaultFormats.DisplayFormatInteger = '#,##0'
+    DefaultFormats.EditFormatNumeric = '#0.0'
+    DefaultFormats.EditFormatInteger = '#0'
+    DetailConditions = []
+    DataBase = MainDB
+    Macros = <    
+      item
+        Name = 'Macro1'
+        Value = '0=0'
+      end>
+    Option = [poTrimCharFields, poRefreshAfterPost]
+    Transaction = MainTr
+    UpdateTransaction = MainTr
+    UpdateRecordTypes = [cusUnmodified, cusModified, cusInserted]
+    SQLSelect.Strings = (
+      'select'
+      '  *'
+      'from'
+      '  EMPLOYEE'
+      'where'
+      '  EMPLOYEE.DEPT_NO = :DEPT_NO'
+      '  @Macro1'
+    )
+    left = 64
+    top = 104
+  end
+  object FBDataSet_WithParam: TFBDataSet
+    MaxMEMOStringSize = 0
+    AutoUpdateOptions.WhenGetGenID = wgNever
+    AutoUpdateOptions.IncrementBy = 1
+    DefaultFormats.DisplayFormatNumeric = '#,##0.0'
+    DefaultFormats.DisplayFormatInteger = '#,##0'
+    DefaultFormats.EditFormatNumeric = '#0.0'
+    DefaultFormats.EditFormatInteger = '#0'
+    DetailConditions = []
+    DataBase = MainDB
+    Macros = <>
+    Option = [poTrimCharFields, poRefreshAfterPost]
+    Transaction = MainTr
+    UpdateTransaction = MainTr
+    UpdateRecordTypes = [cusUnmodified, cusModified, cusInserted]
+    SQLSelect.Strings = (
+      'select'
+      '  *'
+      'from'
+      '  EMPLOYEE'
+      'where'
+      '  EMPLOYEE.DEPT_NO = :DEPT_NO'
+      ''
+    )
+    left = 64
+    top = 200
+  end
+end

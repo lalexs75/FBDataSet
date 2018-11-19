@@ -1,0 +1,82 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{5bf056c5-1299-479b-abf6-e5822ab5fe3b}</ProjectGuid>
+    <MainSource>FB_IB_DataSets.dpk</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>C:\Users\Public\Documents\RAD Studio\5.0\Bpl\FB_IB_DataSets.bpl</DCC_DependencyCheckOutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_IOChecking>False</DCC_IOChecking>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_UnitSearchPath>$(DELPHI)\Lib\Debug;..\.;..\..\.</DCC_UnitSearchPath>
+    <DCC_ResourcePath>$(DELPHI)\Lib\Debug;..\.;..\..\.</DCC_ResourcePath>
+    <DCC_ObjPath>$(DELPHI)\Lib\Debug;..\.;..\..\.</DCC_ObjPath>
+    <DCC_IncludePath>$(DELPHI)\Lib\Debug;..\.;..\..\.</DCC_IncludePath>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_IOChecking>False</DCC_IOChecking>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_UnitSearchPath>$(DELPHI)\Lib\Debug;..\.;..\..\.</DCC_UnitSearchPath>
+    <DCC_ResourcePath>$(DELPHI)\Lib\Debug;..\.;..\..\.</DCC_ResourcePath>
+    <DCC_ObjPath>$(DELPHI)\Lib\Debug;..\.;..\..\.</DCC_ObjPath>
+    <DCC_IncludePath>$(DELPHI)\Lib\Debug;..\.;..\..\.</DCC_IncludePath>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType>Package</Borland.ProjectType>
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="HostApplication">D:\Program Files\Borland\Delphi7\Bin\delphi32.exe</Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><Package_Options><Package_Options Name="PackageDescription">FB &amp; IB DataSet, based on UIB low level data access componets</Package_Options><Package_Options Name="ImplicitBuild">False</Package_Options><Package_Options Name="DesigntimeOnly">False</Package_Options><Package_Options Name="RuntimeOnly">False</Package_Options></Package_Options><Language><Language Name="RootDir">C:\Program Files\Borland\Delphi7\Bin\</Language></Language><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">1</VersionInfo><VersionInfo Name="MinorVer">0</VersionInfo><VersionInfo Name="Release">25</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">1049</VersionInfo><VersionInfo Name="CodePage">1251</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName"></VersionInfoKeys><VersionInfoKeys Name="FileDescription"></VersionInfoKeys><VersionInfoKeys Name="FileVersion">1.0.25.0</VersionInfoKeys><VersionInfoKeys Name="InternalName"></VersionInfoKeys><VersionInfoKeys Name="LegalCopyright"></VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName"></VersionInfoKeys><VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys></VersionInfoKeys><Source><Source Name="MainSource">FB_IB_DataSets.dpk</Source></Source>  <Excluded_Packages>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\dcl_FB_IB_DataSet.bpl">Design time package for FBDataSet</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dcloffice2k100.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dclofficexp100.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+    </Excluded_Packages>
+  </Delphi.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="FB_IB_DataSets.dpk">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="..\..\FBCustomDataSet.pas" />
+    <DCCReference Include="..\..\FBMisc.pas" />
+    <DCCReference Include="..\..\FBParams.pas" />
+    <DCCReference Include="..\..\mydbUnit.pas" />
+    <DCCReference Include="..\..\uibstoredproc.pas" />
+    <DCCReference Include="..\fbdatasetregister.pas">
+      <Form>/,</Form>
+    </DCCReference>
+    <DCCReference Include="C:\Users\Fikret\Desktop\dbrtl.dcp" />
+    <DCCReference Include="C:\Users\Fikret\Desktop\designide.dcp" />
+    <DCCReference Include="C:\Users\Fikret\Desktop\rtl.dcp" />
+    <DCCReference Include="C:\Users\Fikret\Desktop\uibD11Win32R.dcp" />
+    <DCCReference Include="C:\Users\Fikret\Desktop\vcl.dcp" />
+    <DCCReference Include="C:\Users\Fikret\Desktop\vclactnband.dcp" />
+    <DCCReference Include="C:\Users\Fikret\Desktop\vcldb.dcp" />
+    <DCCReference Include="C:\Users\Fikret\Desktop\vclx.dcp" />
+  </ItemGroup>
+</Project>

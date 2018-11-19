@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="UIBEditors"/>
+    <Type Value="RunAndDesignTime"/>
+    <AddToProjectUsesSection Value="True"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="$(LazarusDir)\ideintf\units\$(TargetCPU)\$(TargetOS)"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <UseAnsiStrings Value="False"/>
+        </SyntaxOptions>
+      </Parsing>
+    </CompilerOptions>
+    <Version Release="1" Build="2"/>
+    <Files Count="6">
+      <Item1>
+        <Filename Value="jvuibdatabaseedit.lfm"/>
+        <Type Value="LFM"/>
+      </Item1>
+      <Item2>
+        <Filename Value="jvuibdatabaseedit.pas"/>
+        <UnitName Value="jvuibdatabaseedit"/>
+      </Item2>
+      <Item3>
+        <Filename Value="jvuibtransactionedit.lfm"/>
+        <Type Value="LFM"/>
+      </Item3>
+      <Item4>
+        <Filename Value="jvuibtransactionedit.pas"/>
+        <UnitName Value="jvuibtransactionedit"/>
+      </Item4>
+      <Item5>
+        <Filename Value="laz_editors_register.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="laz_editors_register"/>
+      </Item5>
+      <Item6>
+        <Filename Value="uibeditorsconsts.pas"/>
+        <UnitName Value="uibeditorsconsts"/>
+      </Item6>
+    </Files>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <RequiredPkgs Count="4">
+      <Item1>
+        <PackageName Value="IDEIntf"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="UIBLaz"/>
+      </Item4>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)\"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

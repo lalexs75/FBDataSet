@@ -1,0 +1,396 @@
+object sprCustomerEditForm: TsprCustomerEditForm
+  Left = 319
+  Height = 537
+  Top = 122
+  Width = 627
+  ActiveControl = DBEdit1
+  BorderStyle = bsDialog
+  Caption = 'Customer data'
+  ClientHeight = 537
+  ClientWidth = 627
+  OnCreate = sprCustomerEditFormCreate
+  LCLVersion = '0.9.29'
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideBottom.Control = DBEdit1
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 18
+    Top = 6
+    Width = 64
+    BorderSpacing.Around = 6
+    Caption = 'Customer'
+    FocusControl = DBEdit1
+    ParentColor = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = DBEdit1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = DBEdit2
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 18
+    Top = 63
+    Width = 79
+    BorderSpacing.Around = 6
+    Caption = 'Contact first'
+    FocusControl = DBEdit1
+    ParentColor = False
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = DBEdit2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = DBEdit3
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 18
+    Top = 120
+    Width = 78
+    BorderSpacing.Around = 6
+    Caption = 'Contact last'
+    FocusControl = DBEdit1
+    ParentColor = False
+  end
+  object Label4: TLabel
+    AnchorSideLeft.Control = DBEdit3
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = DBEdit2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = DBEdit4
+    AnchorSideBottom.Side = asrBottom
+    Left = 310
+    Height = 18
+    Top = 120
+    Width = 63
+    BorderSpacing.Around = 6
+    Caption = 'Phone No'
+    FocusControl = DBEdit1
+    ParentColor = False
+  end
+  object Label5: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = DBEdit4
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = DBEdit5
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 18
+    Top = 177
+    Width = 87
+    BorderSpacing.Around = 6
+    Caption = 'Adress, line 1'
+    FocusControl = DBEdit1
+    ParentColor = False
+  end
+  object Label6: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = DBEdit6
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = DBComboBox1
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 18
+    Top = 411
+    Width = 51
+    BorderSpacing.Top = 6
+    BorderSpacing.Around = 6
+    Caption = 'Country'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = DBEdit9
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = DBEdit6
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 18
+    Top = 348
+    Width = 75
+    BorderSpacing.Around = 6
+    Caption = 'Postal code'
+    FocusControl = DBEdit1
+    ParentColor = False
+  end
+  object Label8: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = DBEdit5
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = DBEdit7
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 18
+    Top = 234
+    Width = 87
+    BorderSpacing.Around = 6
+    Caption = 'Adress, line 2'
+    FocusControl = DBEdit1
+    ParentColor = False
+  end
+  object Label9: TLabel
+    AnchorSideLeft.Control = DBEdit6
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = DBEdit9
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = DBEdit8
+    AnchorSideBottom.Side = asrBottom
+    Left = 206
+    Height = 18
+    Top = 348
+    Width = 25
+    BorderSpacing.Around = 6
+    Caption = 'City'
+    FocusControl = DBEdit1
+    ParentColor = False
+  end
+  object Label10: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = DBEdit7
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = DBEdit9
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 18
+    Top = 291
+    Width = 98
+    BorderSpacing.Around = 6
+    Caption = 'State, province'
+    FocusControl = DBEdit1
+    ParentColor = False
+  end
+  object DBEdit1: TDBEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 12
+    Height = 27
+    Top = 30
+    Width = 609
+    DataField = 'CUSTOMER'
+    DataSource = MainForm.dsSprCustomer
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    AnchorSideLeft.Control = Label2
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = CheckBox1
+    Left = 12
+    Height = 27
+    Top = 87
+    Width = 530
+    DataField = 'CONTACT_FIRST'
+    DataSource = MainForm.dsSprCustomer
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    AnchorSideLeft.Control = Label3
+    AnchorSideTop.Control = Label3
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = CheckBox1
+    Left = 12
+    Height = 27
+    Top = 144
+    Width = 292
+    DataField = 'CONTACT_LAST'
+    DataSource = MainForm.dsSprCustomer
+    BorderSpacing.Around = 6
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object DBEdit4: TDBEdit
+    AnchorSideLeft.Control = Label4
+    AnchorSideTop.Control = Label4
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 316
+    Height = 27
+    Top = 144
+    Width = 305
+    DataField = 'PHONE_NO'
+    DataSource = MainForm.dsSprCustomer
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object DBEdit5: TDBEdit
+    AnchorSideLeft.Control = Label5
+    AnchorSideTop.Control = Label5
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 12
+    Height = 27
+    Top = 201
+    Width = 609
+    DataField = 'ADDRESS_LINE1'
+    DataSource = MainForm.dsSprCustomer
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 5
+  end
+  object DBEdit6: TDBEdit
+    AnchorSideLeft.Control = Label7
+    AnchorSideTop.Control = Label7
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = CheckBox1
+    Left = 12
+    Height = 27
+    Top = 372
+    Width = 188
+    DataField = 'POSTAL_CODE'
+    DataSource = MainForm.dsSprCustomer
+    BorderSpacing.Around = 6
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 9
+  end
+  object DBEdit7: TDBEdit
+    AnchorSideLeft.Control = Label8
+    AnchorSideTop.Control = Label8
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 12
+    Height = 27
+    Top = 258
+    Width = 609
+    DataField = 'ADDRESS_LINE2'
+    DataSource = MainForm.dsSprCustomer
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 6
+  end
+  object DBEdit8: TDBEdit
+    AnchorSideLeft.Control = Label9
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Label9
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 237
+    Height = 27
+    Top = 372
+    Width = 384
+    DataField = 'CITY'
+    DataSource = MainForm.dsSprCustomer
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 7
+  end
+  object DBEdit9: TDBEdit
+    AnchorSideLeft.Control = Label10
+    AnchorSideTop.Control = Label10
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 12
+    Height = 27
+    Top = 315
+    Width = 609
+    DataField = 'STATE_PROVINCE'
+    DataSource = MainForm.dsSprCustomer
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 8
+  end
+  object CheckBox1: TCheckBox
+    AnchorSideTop.Control = DBEdit2
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 548
+    Height = 22
+    Top = 89
+    Width = 73
+    Anchors = [akTop, akRight]
+    BorderSpacing.Around = 6
+    Caption = 'On hold'
+    TabOrder = 2
+  end
+  object DBComboBox1: TComboBox
+    AnchorSideLeft.Control = Label6
+    AnchorSideTop.Control = Label6
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 12
+    Height = 31
+    Top = 435
+    Width = 609
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    ItemHeight = 0
+    Style = csDropDownList
+    TabOrder = 10
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 42
+    Top = 489
+    Width = 615
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = '&ОК'
+    HelpButton.Name = 'HelpButton'
+    HelpButton.Caption = '&Справка'
+    CloseButton.Name = 'CloseButton'
+    CloseButton.Caption = '&Закрыть'
+    CloseButton.Enabled = False
+    CancelButton.Name = 'CancelButton'
+    CancelButton.Caption = 'Отмена'
+    TabOrder = 11
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+  end
+  object quSprCountry: TFBDataSet
+    MaxMEMOStringSize = 0
+    AutoUpdateOptions.WhenGetGenID = wgNever
+    AutoUpdateOptions.IncrementBy = 1
+    DefaultFormats.DisplayFormatNumeric = '#,##0.0'
+    DefaultFormats.DisplayFormatInteger = '#,##0'
+    DefaultFormats.EditFormatNumeric = '#0.0'
+    DefaultFormats.EditFormatInteger = '#0'
+    DetailConditions = []
+    DataBase = MainForm.UIBDataBase1
+    Macros = <>
+    Option = [poTrimCharFields, poRefreshAfterPost]
+    RefreshTransactionKind = tkDefault
+    Transaction = MainForm.trRead
+    UpdateTransaction = MainForm.trWrite
+    UpdateRecordTypes = [cusUnmodified, cusModified, cusInserted]
+    SQLSelect.Strings = (
+      'select'
+      '  *'
+      'from'
+      '  COUNTRY'
+      'order by'
+      '  COUNTRY.COUNTRY'
+    )
+    left = 520
+    top = 424
+  end
+end

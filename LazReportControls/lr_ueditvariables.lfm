@@ -1,0 +1,149 @@
+object lrEditUVariablesForm: TlrEditUVariablesForm
+  Left = 528
+  Height = 413
+  Top = 230
+  Width = 518
+  Caption = 'Edit variables'
+  ClientHeight = 413
+  ClientWidth = 518
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.7'
+  object Memo1: TMemo
+    AnchorSideLeft.Control = Label3
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = BitBtn1
+    Left = 265
+    Height = 213
+    Top = 100
+    Width = 247
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    Lines.Strings = (
+      'Memo2'
+    )
+    TabOrder = 0
+  end
+  object BitBtn1: TBitBtn
+    AnchorSideTop.Control = ListBox1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ButtonPanel1
+    Left = 388
+    Height = 36
+    Top = 319
+    Width = 124
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'Select expresion'
+    OnClick = BitBtn1Click
+    TabOrder = 1
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 46
+    Top = 361
+    Width = 506
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 2
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 6
+    Height = 20
+    Top = 6
+    Width = 81
+    BorderSpacing.Around = 6
+    Caption = 'Variables list'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Label3
+    AnchorSideTop.Control = ComboBox1
+    AnchorSideTop.Side = asrBottom
+    Left = 265
+    Height = 20
+    Top = 74
+    Width = 89
+    BorderSpacing.Around = 6
+    Caption = 'Variable value'
+    ParentColor = False
+  end
+  object ListBox1: TListBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Label3
+    AnchorSideBottom.Control = ButtonPanel1
+    Left = 6
+    Height = 323
+    Top = 32
+    Width = 247
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    ItemHeight = 0
+    OnClick = ListBox1Click
+    ScrollWidth = 245
+    TabOrder = 3
+    TopIndex = -1
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    Left = 259
+    Height = 1
+    Top = 6
+    Width = 1
+    BorderSpacing.Around = 6
+    ParentColor = False
+  end
+  object Label4: TLabel
+    AnchorSideLeft.Control = Label3
+    AnchorSideTop.Control = Owner
+    Left = 265
+    Height = 20
+    Top = 6
+    Width = 73
+    BorderSpacing.Around = 6
+    Caption = 'Param type'
+    ParentColor = False
+  end
+  object ComboBox1: TComboBox
+    AnchorSideLeft.Control = Label4
+    AnchorSideTop.Control = Label4
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 271
+    Height = 36
+    Top = 32
+    Width = 241
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    ItemHeight = 0
+    Items.Strings = (
+      'String'
+      'Integer'
+      'Float'
+      'DateTime'
+    )
+    Style = csDropDownList
+    TabOrder = 4
+  end
+end

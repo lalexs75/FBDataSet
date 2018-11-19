@@ -1,0 +1,23 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: lruibdataconst.seditvariables
+msgid "Edit variables"
+msgstr ""
+
+#: lruibdataconst.sparamtype
+msgid "Param type"
+msgstr ""
+
+#: lruibdataconst.sselectexpresion
+msgid "Select expresion"
+msgstr ""
+
+#: lruibdataconst.svariableslist
+msgid "Variables list"
+msgstr ""
+
+#: lruibdataconst.svariablevalue
+msgid "Variable value"
+msgstr ""
+

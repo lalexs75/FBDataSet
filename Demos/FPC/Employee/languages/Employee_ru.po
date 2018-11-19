@@ -1,0 +1,327 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: lngresourcesunit.sneedrestartconfigch
+msgid "You are need restart for apply you changes..."
+msgstr "Необходимо перезапустить програмум для того, чтобы изменения вступили в силу"
+
+#: lngresourcesunit.sqdeleterecord
+msgid "Delete this record?"
+msgstr "Удалить эту запись?"
+
+#: TCONFIGFORM.CANCELBUTTON.CAPTION
+msgctxt "TCONFIGFORM.CANCELBUTTON.CAPTION"
+msgid "Отмена"
+msgstr ""
+
+#: TCONFIGFORM.CLOSEBUTTON.CAPTION
+msgctxt "TCONFIGFORM.CLOSEBUTTON.CAPTION"
+msgid "&Закрыть"
+msgstr ""
+
+#: TCONFIGFORM.CONFIGFORM.CAPTION
+msgctxt "TCONFIGFORM.CONFIGFORM.CAPTION"
+msgid "Config..."
+msgstr "Конфигурация"
+
+#: TCONFIGFORM.HELPBUTTON.CAPTION
+msgctxt "TCONFIGFORM.HELPBUTTON.CAPTION"
+msgid "&Справка"
+msgstr ""
+
+#: TCONFIGFORM.LABEL1.CAPTION
+msgid "Select language"
+msgstr "Выберите язык"
+
+#: TCONFIGFORM.OKBUTTON.CAPTION
+msgctxt "TCONFIGFORM.OKBUTTON.CAPTION"
+msgid "&ОК"
+msgstr ""
+
+#: THLPABOUTFORM.CANCELBUTTON.CAPTION
+msgctxt "THLPABOUTFORM.CANCELBUTTON.CAPTION"
+msgid "Отмена"
+msgstr ""
+
+#: THLPABOUTFORM.CLOSEBUTTON.CAPTION
+msgctxt "THLPABOUTFORM.CLOSEBUTTON.CAPTION"
+msgid "&Закрыть"
+msgstr ""
+
+#: THLPABOUTFORM.CSDVERSIONLABEL.CAPTION
+msgid "Widget :"
+msgstr ""
+
+#: THLPABOUTFORM.HELPBUTTON.CAPTION
+msgctxt "THLPABOUTFORM.HELPBUTTON.CAPTION"
+msgid "&Справка"
+msgstr ""
+
+#: THLPABOUTFORM.HLPABOUTFORM.CAPTION
+msgctxt "THLPABOUTFORM.HLPABOUTFORM.CAPTION"
+msgid "About..."
+msgstr "О системе..."
+
+#: THLPABOUTFORM.LABEL1.CAPTION
+msgid "FBDataSet Lazarus demo"
+msgstr ""
+
+#: THLPABOUTFORM.LABEL10.CAPTION
+msgid "LCL Version :"
+msgstr ""
+
+#: THLPABOUTFORM.LABEL2.CAPTION
+msgid "(c) 2005, 2008 by Lagunov Aleksey (Alexs)"
+msgstr ""
+
+#: THLPABOUTFORM.LABEL3.CAPTION
+msgid "mail to: alexs75@hotbox.ru, alexs75@yandex.ru"
+msgstr ""
+
+#: THLPABOUTFORM.LABEL4.CAPTION
+msgid "http://alexs75.narod.ru/Files"
+msgstr ""
+
+#: THLPABOUTFORM.LABEL5.CAPTION
+msgid "Build date:"
+msgstr ""
+
+#: THLPABOUTFORM.LABEL6.CAPTION
+msgid "Version:"
+msgstr ""
+
+#: THLPABOUTFORM.LABEL7.CAPTION
+msgid "FPC version :"
+msgstr ""
+
+#: THLPABOUTFORM.LABEL8.CAPTION
+msgctxt "THLPABOUTFORM.LABEL8.CAPTION"
+msgid "Target CPU :"
+msgstr ""
+
+#: THLPABOUTFORM.LABEL9.CAPTION
+msgctxt "THLPABOUTFORM.LABEL9.CAPTION"
+msgid "Target CPU :"
+msgstr ""
+
+#: THLPABOUTFORM.OKBUTTON.CAPTION
+msgctxt "THLPABOUTFORM.OKBUTTON.CAPTION"
+msgid "&ОК"
+msgstr ""
+
+#: TMAINFORM.ACTCUSTDELETE.CAPTION
+msgid "Delete customer"
+msgstr "Удалить покупателя"
+
+#: TMAINFORM.ACTCUSTDELETE.HINT
+msgid "Delete customer from database"
+msgstr "Удалить данные покупателя из базы данных"
+
+#: TMAINFORM.ACTCUSTEDIT.CAPTION
+msgid "Edit customer"
+msgstr "Изменить данные покупателя"
+
+#: TMAINFORM.ACTCUSTEDIT.HINT
+msgid "Edit customer data"
+msgstr "Изменить данные покупателя в базе данных"
+
+#: TMAINFORM.ACTCUSTFILTER.CAPTION
+msgid "Filter"
+msgstr "Отбор"
+
+#: TMAINFORM.ACTCUSTFILTER.HINT
+msgid "Filter demo"
+msgstr "Пример отбора"
+
+#: TMAINFORM.ACTCUSTNEW.CAPTION
+msgid "New customer"
+msgstr "Новый покупатель"
+
+#: TMAINFORM.ACTCUSTNEW.HINT
+msgid "Add new customer to database"
+msgstr "Добавить нового покупателя в базу данных"
+
+#: TMAINFORM.HLPABOUT.CAPTION
+msgctxt "TMAINFORM.HLPABOUT.CAPTION"
+msgid "About..."
+msgstr "О системе..."
+
+#: TMAINFORM.MAINFORM.CAPTION
+msgctxt "TMAINFORM.MAINFORM.CAPTION"
+msgid "Employee demo"
+msgstr "Пример программы Employee"
+
+#: TMAINFORM.MENUITEM1.CAPTION
+msgctxt "TMAINFORM.MENUITEM1.CAPTION"
+msgid "System"
+msgstr "Система"
+
+#: TMAINFORM.MENUITEM10.CAPTION
+msgctxt "TMAINFORM.MENUITEM10.CAPTION"
+msgid "Customer"
+msgstr "Покупатель"
+
+#: TMAINFORM.MENUITEM14.CAPTION
+msgctxt "TMAINFORM.MENUITEM14.CAPTION"
+msgid "-"
+msgstr ""
+
+#: TMAINFORM.MENUITEM17.CAPTION
+msgctxt "TMAINFORM.MENUITEM17.CAPTION"
+msgid "-"
+msgstr ""
+
+#: TMAINFORM.MENUITEM2.CAPTION
+msgid "Help"
+msgstr ""
+
+#: TMAINFORM.MENUITEM8.CAPTION
+msgctxt "TMAINFORM.MENUITEM8.CAPTION"
+msgid "-"
+msgstr ""
+
+#: TMAINFORM.SYSEXIT.CAPTION
+msgid "Exit"
+msgstr "Выход"
+
+#: TMAINFORM.SYSTOOLS.CAPTION
+msgid "Tools..."
+msgstr "Параметры"
+
+#: TMAINFORM.TABCUSTOMER.CAPTION
+msgctxt "TMAINFORM.TABCUSTOMER.CAPTION"
+msgid "Customer"
+msgstr "Покупатель"
+
+#: TMAINFORM.TABDEPAT.CAPTION
+msgid "Depatment"
+msgstr ""
+
+#: TMAINFORM.TABSPRCOUNTRY.CAPTION
+msgctxt "TMAINFORM.TABSPRCOUNTRY.CAPTION"
+msgid "Country"
+msgstr "Страна"
+
+#: TMAINFORM.TOOLBAR1.CAPTION
+msgid "ToolBar1"
+msgstr ""
+
+#: TMAINFORM.TOOLBAR2.CAPTION
+msgid "ToolBar2"
+msgstr ""
+
+#: TMAINFORM.TOOLBAR3.CAPTION
+msgid "ToolBar3"
+msgstr ""
+
+#: TMAINFORM.TOOLBUTTON4.CAPTION
+msgid "ToolButton4"
+msgstr ""
+
+#: TSPRCUSTOMEREDITFORM.CANCELBUTTON.CAPTION
+msgctxt "TSPRCUSTOMEREDITFORM.CANCELBUTTON.CAPTION"
+msgid "Отмена"
+msgstr ""
+
+#: TSPRCUSTOMEREDITFORM.CHECKBOX1.CAPTION
+msgid "On hold"
+msgstr "Работы приостановленны"
+
+#: TSPRCUSTOMEREDITFORM.CLOSEBUTTON.CAPTION
+msgctxt "TSPRCUSTOMEREDITFORM.CLOSEBUTTON.CAPTION"
+msgid "&Закрыть"
+msgstr ""
+
+#: TSPRCUSTOMEREDITFORM.HELPBUTTON.CAPTION
+msgctxt "TSPRCUSTOMEREDITFORM.HELPBUTTON.CAPTION"
+msgid "&Справка"
+msgstr ""
+
+#: TSPRCUSTOMEREDITFORM.LABEL1.CAPTION
+msgctxt "TSPRCUSTOMEREDITFORM.LABEL1.CAPTION"
+msgid "Customer"
+msgstr "Покупатель"
+
+#: TSPRCUSTOMEREDITFORM.LABEL10.CAPTION
+msgid "State, province"
+msgstr "Край, область"
+
+#: TSPRCUSTOMEREDITFORM.LABEL2.CAPTION
+msgid "Contact first"
+msgstr "Имя контактного лица"
+
+#: TSPRCUSTOMEREDITFORM.LABEL3.CAPTION
+msgid "Contact last"
+msgstr "Фамилия контактного лица"
+
+#: TSPRCUSTOMEREDITFORM.LABEL4.CAPTION
+msgctxt "TSPRCUSTOMEREDITFORM.LABEL4.CAPTION"
+msgid "Phone No"
+msgstr "Номер телефона"
+
+#: TSPRCUSTOMEREDITFORM.LABEL5.CAPTION
+msgid "Adress, line 1"
+msgstr "Адрес, страна 1"
+
+#: TSPRCUSTOMEREDITFORM.LABEL6.CAPTION
+msgctxt "TSPRCUSTOMEREDITFORM.LABEL6.CAPTION"
+msgid "Country"
+msgstr "Страна"
+
+#: TSPRCUSTOMEREDITFORM.LABEL7.CAPTION
+msgid "Postal code"
+msgstr "Почтовый индекс"
+
+#: TSPRCUSTOMEREDITFORM.LABEL8.CAPTION
+msgid "Adress, line 2"
+msgstr "Адрес, строка 2"
+
+#: TSPRCUSTOMEREDITFORM.LABEL9.CAPTION
+msgid "City"
+msgstr "Город"
+
+#: TSPRCUSTOMEREDITFORM.OKBUTTON.CAPTION
+msgctxt "TSPRCUSTOMEREDITFORM.OKBUTTON.CAPTION"
+msgid "&ОК"
+msgstr ""
+
+#: TSPRCUSTOMEREDITFORM.SPRCUSTOMEREDITFORM.CAPTION
+msgctxt "TSPRCUSTOMEREDITFORM.SPRCUSTOMEREDITFORM.CAPTION"
+msgid "Customer data"
+msgstr "Данне на покупателя"
+
+#: TSPRCUSTOMERFILTERFORM.CANCELBUTTON.CAPTION
+msgctxt "TSPRCUSTOMERFILTERFORM.CANCELBUTTON.CAPTION"
+msgid "Отмена"
+msgstr ""
+
+#: TSPRCUSTOMERFILTERFORM.CLOSEBUTTON.CAPTION
+msgctxt "TSPRCUSTOMERFILTERFORM.CLOSEBUTTON.CAPTION"
+msgid "&Закрыть"
+msgstr ""
+
+#: TSPRCUSTOMERFILTERFORM.HELPBUTTON.CAPTION
+msgctxt "TSPRCUSTOMERFILTERFORM.HELPBUTTON.CAPTION"
+msgid "&Справка"
+msgstr ""
+
+#: TSPRCUSTOMERFILTERFORM.LABEL1.CAPTION
+msgctxt "TSPRCUSTOMERFILTERFORM.LABEL1.CAPTION"
+msgid "Customer"
+msgstr "Покупатель"
+
+#: TSPRCUSTOMERFILTERFORM.LABEL2.CAPTION
+msgctxt "TSPRCUSTOMERFILTERFORM.LABEL2.CAPTION"
+msgid "Phone No"
+msgstr "Телефон"
+
+#: TSPRCUSTOMERFILTERFORM.OKBUTTON.CAPTION
+msgctxt "TSPRCUSTOMERFILTERFORM.OKBUTTON.CAPTION"
+msgid "&ОК"
+msgstr ""
+
+#: TSPRCUSTOMERFILTERFORM.SPRCUSTOMERFILTERFORM.CAPTION
+msgctxt "TSPRCUSTOMERFILTERFORM.SPRCUSTOMERFILTERFORM.CAPTION"
+msgid "Filter on cutomer"
+msgstr "Отбор покупателей"
+

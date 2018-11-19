@@ -1,0 +1,64 @@
+(********************************************************************************)
+(*                        FB/IB Data set (FBDataSet)                            *)
+(*                                                                              *)
+(* The contents of this file are subject to the GNU LIBRARY GENERAL PUBLIC      *)
+(* LICENSE 2 (the "License"); you may not use this file except in compliance    *)
+(* with the License. You may obtain a copy of the License at                    *)
+(*  http://www.gnu.org/copyleft/lesser.html                                     *)
+(*                                                                              *)
+(* Software distributed under the License is distributed on an "AS IS" basis,   *)
+(* WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for *)
+(* the specific language governing rights and limitations under the License.    *)
+(*                                                                              *)
+(* Unit owner : Lagunov Aleksey <alexs75@hotbox.ru>                             *)
+(*                                                                              *)
+(********************************************************************************)
+
+package FB_IB_DataSets;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS OFF}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'FB & IB DataSet, based on UIB low level data access componets'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dbrtl,
+  JvUIBD7R,
+  vcl,
+  SynEdit_R7,
+  vcldb,
+  vclx,
+  vclactnband,
+  designide;
+
+contains
+  FBCustomDataSet in '..\..\FBCustomDataSet.pas',
+  mydbUnit in '..\..\mydbUnit.pas',
+  FBMisc in '..\..\FBMisc.pas',
+  FBParams in '..\..\FBParams.pas',
+  jvuibstoredproc in '..\..\jvuibstoredproc.pas',
+  FBDataSetRegister in '..\fbdatasetregister.pas',
+  DBOverlap in '..\dboverlap.pas';
+
+end.

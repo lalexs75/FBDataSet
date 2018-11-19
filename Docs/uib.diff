@@ -1,0 +1,317 @@
+Index: source/uib.inc
+===================================================================
+--- source/uib.inc	(revision 428)
++++ source/uib.inc	(working copy)
+@@ -42,7 +42,7 @@
+ {.$DEFINE FB15}
+ {.$DEFINE FB20}
+ {.$DEFINE FB21}
+-{.$DEFINE FB25}
++{$DEFINE FB25}
+ {.$DEFINE FB30}
+ {.$DEFINE FBEMBED}
+ 
+Index: source/uib.pas
+===================================================================
+--- source/uib.pas	(revision 428)
++++ source/uib.pas	(working copy)
+@@ -139,6 +139,10 @@
+ 
+   TUIBDataBase = class(TUIBComponent)
+   private
++    FAllowStreamedConnected: Boolean;
++    FStreamedConnected      : Boolean;
++    FDefTransactionRead: TUIBTransaction;
++    FDefTransactionWrite: TUIBTransaction;
+     FLibrary: TUIBLibrary;
+     FLiBraryName: TFileName;
+     FDbHandle: IscDbHandle;
+@@ -176,6 +180,7 @@
+     procedure SetDatabaseName(const Value: TFileName);
+     procedure SetConnected(const Value: boolean);
+     function GetConnected: boolean;
++    procedure InternalSetConnected(const Value: boolean);
+     procedure SetSQLDialect(const Value: Integer);
+     function GetSQLDialect: Integer;
+     function GetCharacterSet: TCharacterSet;
+@@ -224,6 +229,7 @@
+     function CanConnect : Boolean; virtual;
+     procedure DoOnConnectionLost(Lib: TUIBLibrary); virtual;
+     procedure DoOnGetDBExceptionClass(Number: Integer; out Excep: EUIBExceptionClass); virtual;
++    procedure Loaded; override;
+     function ReadParamString(Param: String; Default: String = ''): String;
+     procedure WriteParamString(Param: String; Value: String);
+     function ReadParamInteger(Param: String; Default: Integer): Integer;
+@@ -461,6 +467,20 @@
+     property Connected: boolean read GetConnected write SetConnected default False;
+     property Role: string read GetRole write SetRole;
+ 
++    { alexs - When AllowStreamedConnected is true (the default), then setting the Connected }
++    {   property to true at design time causes this component to automatically establish a  }
++    {   database connection when the application starts up. When AllowStreamedConnected is  }
++    {   false, the connection must be explicitly opened at runtime, either by setting the   }
++    {   Connected property to true, or by calling the Open method.                          }
++    {     Set AllowStreamedConnected to false when using a local test database at design    }
++    {   time and a different database at runtime. This allows the application to set the    }
++    {   appropriate runtime connection information before opening a runtime connection,     }
++    {   without having to explicitly shut down the database connection that is used at      }
++    {   design time.                                                                        }
++    property AllowStreamedConnected : Boolean read FAllowStreamedConnected write FAllowStreamedConnected default true;
++    property DefTransactionRead  : TUIBTransaction read FDefTransactionRead write FDefTransactionRead;
++    property DefTransactionWrite : TUIBTransaction read FDefTransactionWrite write FDefTransactionWrite;
++
+     property OnInfoReadSeqCount: TOnInfoTableOpCount read FOnInfoReadSeqCount write FOnInfoReadSeqCount;
+     property OnInfoReadIdxCount: TOnInfoTableOpCount read FOnInfoReadIdxCount write FOnInfoReadIdxCount;
+     property OnInfoUpdateCount: TOnInfoTableOpCount read FOnInfoUpdateCount write FOnInfoUpdateCount;
+@@ -1300,6 +1320,7 @@
+   FMetadata := nil;
+   FMetaDataOptions := TMetaDataOptions.Create;
+   FStoreInDFM := True;
++  FAllowStreamedConnected := true;
+ end;
+ 
+ destructor TUIBDataBase.Destroy;
+@@ -1339,6 +1360,49 @@
+   result := FDbHandle <> nil;
+ end;
+ 
++procedure TUIBDataBase.InternalSetConnected(const Value: boolean);
++begin
++  if (Value = Connected) then Exit;
++  with FLibrary do
++  case Value of
++    True  :
++      begin
++        if not CanConnect then
++          Exit;
++        if Assigned(BeforeConnect) then BeforeConnect(Self);
++        FLibrary.Load(FLiBraryName);
++        if not FHandleShared then
++        begin
++{$IFDEF FB25_UP}
++{$IFDEF UNICODE}
++          if FParams.IndexOf('utf8_filename') >= 0 then
++            AttachDatabase(MBUEncode(FDatabaseName, CP_UTF8), FDbHandle, AnsiString(FParams.Text), BreakLine) else
++{$ENDIF}
++{$ENDIF}
++            AttachDatabase(AnsiString(FDatabaseName), FDbHandle, AnsiString(FParams.Text), BreakLine);
++        end;
++        RegisterEvents;
++        if Assigned(AfterConnect) then AfterConnect(Self);
++      end;
++    False :
++      begin
++        if Assigned(BeforeDisconnect) then BeforeDisconnect(Self);
++        CloseStatements;
++        CloseTransactions;
++        UnRegisterEvents;
++        if FMetadata <> nil then
++          FreeAndNil(FMetadata);
++        if FHandleShared then
++        begin
++          FDbHandle := nil;
++          FHandleShared := False;
++        end else
++          DetachDatabase(FDbHandle);
++        if Assigned(AfterDisconnect) then AfterDisconnect(Self);
++      end;
++  end;
++end;
++
+ function TUIBDataBase.GetPassWord: string;
+ begin
+   result := ReadParamString('password');
+@@ -1438,45 +1502,13 @@
+ 
+ procedure TUIBDataBase.SetConnected(const Value: boolean);
+ begin
++  if (csReading in ComponentState) then
++  begin
++    FStreamedConnected := Value;
++    exit;
++  end;
+   if (Value = Connected) then Exit;
+-  with FLibrary do
+-  case Value of
+-    True  :
+-      begin
+-        if not CanConnect then
+-          Exit;
+-        if Assigned(BeforeConnect) then BeforeConnect(Self);
+-        FLibrary.Load(FLiBraryName);
+-        if not FHandleShared then
+-        begin
+-{$IFDEF FB25_UP}
+-{$IFDEF UNICODE}
+-          if FParams.IndexOf('utf8_filename') >= 0 then
+-            AttachDatabase(MBUEncode(FDatabaseName, CP_UTF8), FDbHandle, AnsiString(FParams.Text), BreakLine) else
+-{$ENDIF}
+-{$ENDIF}
+-            AttachDatabase(AnsiString(FDatabaseName), FDbHandle, AnsiString(FParams.Text), BreakLine);
+-        end;
+-        RegisterEvents;
+-        if Assigned(AfterConnect) then AfterConnect(Self);
+-      end;
+-    False :
+-      begin
+-        if Assigned(BeforeDisconnect) then BeforeDisconnect(Self);
+-        CloseStatements;
+-        CloseTransactions;
+-        UnRegisterEvents;
+-        if FMetadata <> nil then
+-          FreeAndNil(FMetadata);
+-        if FHandleShared then
+-        begin
+-          FDbHandle := nil;
+-          FHandleShared := False;
+-        end else
+-          DetachDatabase(FDbHandle);
+-        if Assigned(AfterDisconnect) then AfterDisconnect(Self);
+-      end;
+-  end;
++  InternalSetConnected(Value);
+ end;
+ 
+ procedure TUIBDataBase.SetDatabaseName(const Value: TFileName);
+@@ -1662,6 +1694,32 @@
+   FSQLDialect := ReadParamInteger('sql_dialect', 3);
+ end;
+ 
++procedure TUIBDataBase.Loaded;
++begin
++  try
++    If (not FAllowStreamedConnected) and
++       (not (csDesigning in ComponentState)) then
++    begin
++      FStreamedConnected := false;
++{      for i := 0 to FTransactions.Count - 1 do
++        if  FTransactions[i] <> nil then
++          with TIBTransaction(FTransactions[i]) do
++            FStreamedActive := False;}
++    end;
++    if FAllowStreamedConnected and (GetConnected <> FStreamedConnected) then
++    begin
++      InternalSetConnected(FStreamedConnected);
++      inherited Loaded;
++    end
++  except
++    if csDesigning in ComponentState then
++      if Assigned(ApplicationHandleException) then
++        ApplicationHandleException(Self)
++    else
++      raise;
++  end;
++end;
++
+ function TUIBDataBase.GetMetadata(Refresh: boolean = False): TObject;
+ var
+   Transaction: TUIBTransaction;
+Index: source/uibconst.pas
+===================================================================
+--- source/uibconst.pas	(revision 428)
++++ source/uibconst.pas	(working copy)
+@@ -91,7 +91,11 @@
+   EUIB_INVALIDEIBVERSION   = 'Incorrect Database Server version, check compiler options.';
+   EUIB_CANTLOADLIB         = 'Can''t load library: %s.';
+   EUIB_DBHANDLEALREADYSET  = 'Database handle already assigned, first disconnect database.';
++  {$IFDEF UIB_NO_COMPONENT}
+   EUIB_TRANSACTIONNOTDEF   = 'Transaction not assigned.';
++  {$ELSE}
++  EUIB_TRANSACTIONNOTDEF   = '%s: transaction not assigned.';
++  {$ENDIF}
+   EUIB_DATABASENOTDEF      = 'Database not assigned.';
+   EUIB_QUERYNOTOPEN        = 'Query not open.';
+   EUIB_CASTERROR           = 'Cast error.';
+@@ -378,4 +382,4 @@
+ 
+ implementation
+ 
+-end.
++end.Index: source/uiblaz.lpk
+===================================================================
+--- source/uiblaz.lpk	(revision 428)
++++ source/uiblaz.lpk	(working copy)
+@@ -4,14 +4,10 @@
+     <Name Value="UIBLaz"/>
+     <Author Value="Henri Gourvest"/>
+     <CompilerOptions>
+-      <Version Value="5"/>
++      <Version Value="8"/>
+       <SearchPaths>
+-        <OtherUnitFiles Value="./"/>
+-        <UnitOutputDirectory Value="lib"/>
++        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+       </SearchPaths>
+-      <CodeGeneration>
+-        <Generate Value="Faster"/>
+-      </CodeGeneration>
+       <Other>
+         <Verbosity>
+           <ShowHints Value="False"/>
+Index: source/uiblaz.pas
+===================================================================
+--- source/uiblaz.pas	(revision 428)
++++ source/uiblaz.pas	(working copy)
+@@ -1,22 +1,21 @@
+-{  Ce fichier est automatiquement créé par Lazarus. Ne pas le modifier!
+-  Ce code source est utilisé seulement pour compiler et installer
+-  le paquet UIBLaz 1.0.
+- }
+-
+-unit UIBLaz; 
+-
+-interface
+-
+-uses
+-  registeruib, uib, uibdataset, LazarusPackageIntf; 
+-
+-implementation
+-
+-procedure Register; 
+-begin
+-  RegisterUnit('registeruib', @registeruib.Register); 
+-end; 
+-
+-initialization
+-  RegisterPackage('UIBLaz', @Register); 
+-end.
++{ This file was automatically created by Lazarus. Do not edit!
++  This source is only used to compile and install the package.
++ }
++
++unit UIBLaz; 
++
++interface
++
++uses
++  registeruib, uib, uibdataset, uibavl, LazarusPackageIntf;
++
++implementation
++
++procedure Register; 
++begin
++  RegisterUnit('registeruib', @registeruib.Register); 
++end; 
++
++initialization
++  RegisterPackage('UIBLaz', @Register); 
++end.
+Index: source/uiblib.pas
+===================================================================
+--- source/uiblib.pas	(revision 428)
++++ source/uiblib.pas	(working copy)
+@@ -2877,7 +2877,7 @@
+       try
+         Stream.Read(Buffer^, Cardinal(Stream.Size));
+         BlobWriteSegment(BlobHandle, Cardinal(Stream.Size), Buffer);
+-        Stream.Seek(0, soFromBeginning);
++       // Stream.Seek(0, soFromBeginning);
+       finally
+         FreeMem(buffer);
+       end;
+@@ -6871,4 +6871,4 @@
+ 
+ end.
+ 
+-
++

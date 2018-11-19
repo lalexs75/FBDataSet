@@ -1,0 +1,500 @@
+<?xml version="1.0"?>
+<fpdoc-descriptions>
+  <package name="FBDataSet">
+    <module name="fbcustomdataset">
+      <element name="TFieldHeader"/>
+      <element name="PFieldHeader"/>
+      <element name="FieldHeaderIndex"/>
+      <element name="TFieldsHeader"/>
+      <element name="AnsiMinSizeTh">
+        <short>граница минимальной длинны строки, начиная с которой выгодно ее хранить в ansiString</short>
+        <descr>граница минимальной длинны строки, начиная с которой выгодно ее хранить в ansiString</descr>
+      </element>
+      <element name="fdNativeData"/>
+      <element name="fdConvertData"/>
+      <element name="IntegersArray"/>
+      <element name="AppendItem"/>
+      <element name="TBlobCacheStream"/>
+      <element name="TRecordsBufferIndex"/>
+      <element name="PBLOBFieldData"/>
+      <element name="TBLOBFieldData"/>
+      <element name="TRecordsBuffer"/>
+      <element name="TFBCustomDataSet"/>
+      <element name="TFBUpdateRecordTypes"/>
+      <element name="TFBDataLink"/>
+      <element name="TFBDataLink.Create"/>
+      <element name="TFBDataLink.Destroy"/>
+      <element name="TAutoUpdateOptions"/>
+      <element name="TAutoUpdateOptions.Create"/>
+      <element name="TAutoUpdateOptions.Destroy"/>
+      <element name="TAutoUpdateOptions.ApplyGetGenID"/>
+      <element name="TAutoUpdateOptions.Assign"/>
+      <element name="TAutoUpdateOptions.IsComplete"/>
+      <element name="TAutoUpdateOptions.KeyField"/>
+      <element name="TAutoUpdateOptions.UpdateTableName"/>
+      <element name="TAutoUpdateOptions.WhenGetGenID"/>
+      <element name="TAutoUpdateOptions.GeneratorName"/>
+      <element name="TAutoUpdateOptions.IncrementBy"/>
+      <element name="TFBAnsiMemoField"/>
+      <element name="FBAnsiMemoField"/>
+      <element name="TFBAnsiField"/>
+      <element name="TFBAnsiField.AsString"/>
+      <element name="TFBAnsiField.Value"/>
+      <element name="FBAnsiField"/>
+      <element name="TFBBlobField"/>
+      <element name="TFBBlobField.SaveToStrings"/>
+      <element name="TFBLargeintField"/>
+      <element name="TDSBLOBCacheList"/>
+      <element name="TFBCustomDataSet.Create"/>
+      <element name="TFBCustomDataSet.Destroy"/>
+      <element name="TFBCustomDataSet.GetFieldData"/>
+      <element name="TFBCustomDataSet.CreateBlobStream"/>
+      <element name="TFBCustomDataSet.ApplyUpdates">
+        <short>Передаёт все локальные изменения данных на сервер</short>
+        <descr>Передаёт все локальные изменения данных на сервер</descr>
+      </element>
+      <element name="TFBCustomDataSet.CachedUpdateStatus"/>
+      <element name="TFBCustomDataSet.CancelUpdates"/>
+      <element name="TFBCustomDataSet.CloseOpen">
+        <short>Переоткрывает набор данных</short>
+        <descr>Переоткрывает набор данных</descr>
+      </element>
+      <element name="TFBCustomDataSet.FetchAll">
+        <short>Выбираем все данных на клиента</short>
+        <descr>Выбираем все данных на клиента</descr>
+      </element>
+      <element name="TFBCustomDataSet.FetchNext">
+        <short>Выбираем следующую порцию данных с сервера</short>
+        <descr>Выбираем следующую порцию данных</descr>
+      </element>
+      <element name="TFBCustomDataSet.SortOnField"/>
+      <element name="TFBCustomDataSet.SortOnFields"/>
+      <element name="TFBCustomDataSet.ExpandMacros"/>
+      <element name="TFBCustomDataSet.MacroByName"/>
+      <element name="TFBCustomDataSet.Lookup"/>
+      <element name="TFBCustomDataSet.Locate"/>
+      <element name="TFBCustomDataSet.SetFieldValues"/>
+      <element name="TFBCustomDataSet.GetFieldValues"/>
+      <element name="TFBCustomDataSet.CurRecordCachedUpdateStatus"/>
+      <element name="TFBCustomDataSet.MacroCount">
+        <short>Количество макросов в тексте Select SQL запроса</short>
+        <descr>Количество макросов в тексте Select SQL запроса</descr>
+      </element>
+      <element name="TFBCustomDataSet.FetchedRecordCount">
+        <short>Количесво уже выбранных записей с сервера на клиента</short>
+        <descr>Количесво уже выбранных записей с сервера на клиента</descr>
+      </element>
+      <element name="TFBCustomDataSet.CloneRecord">
+        <short>Метод создаёт новую копию указанной записи</short>
+        <descr>Метод создаёт новую копию указанной записи, при копировании данных игнорируются поля, перечисленные в IgnoreFields</descr>
+      </element>
+      <element name="TFBCustomDataSet.CloneCurRecord">
+        <short>Метод создаёт новую копию текущей записи</short>
+        <descr>Метод создаёт новую копию текущей записи, при копировании данных игнорируются поля, перечисленные в IgnoreFields</descr>
+      </element>
+      <element name="TFBCustomDataSet.MemoValue"/>
+      <element name="TFBCustomDataSet.RefreshTransactionKind"/>
+      <element name="TFBCustomDataSet.SQLScreenCursor"/>
+      <element name="TFBCustomDataSet.MaxMEMOStringSize"/>
+      <element name="TRecBuf"/>
+      <element name="TRecBuf.Create"/>
+      <element name="TRecBuf.Destroy"/>
+      <element name="TRecBuf.Modify"/>
+      <element name="TRecBuf.Current"/>
+      <element name="TRecBuf.Original"/>
+      <element name="SaveCacheList"/>
+      <element name="TRecordsBuffer.Create"/>
+      <element name="TRecordsBuffer.Destroy"/>
+      <element name="TRecordsBuffer.ReadRecordFromQuery"/>
+      <element name="TRecordsBuffer.RefreshRecordFromQuery"/>
+      <element name="TRecordsBuffer.SaveToBuffer"/>
+      <element name="TRecordsBuffer.SaveFromBuffer"/>
+      <element name="TRecordsBuffer.SaveFromBufferI"/>
+      <element name="TRecordsBuffer.SaveFromBufferA"/>
+      <element name="TRecordsBuffer.Clear"/>
+      <element name="TRecordsBuffer.SortOnField"/>
+      <element name="TRecordsBuffer.SortOnFields"/>
+      <element name="TRecordsBuffer.DeleteRecord"/>
+      <element name="TRecordsBuffer.EditRecord"/>
+      <element name="TRecordsBuffer.SaveCache"/>
+      <element name="TRecordsBuffer.LoadCache"/>
+      <element name="TFBDataSet"/>
+      <element name="TFBDataSet.Params"/>
+      <element name="TFBDataSet.QuerySelect"/>
+      <element name="TFBDataSet.QueryRefresh"/>
+      <element name="TFBDataSet.QueryInsert"/>
+      <element name="TFBDataSet.QueryEdit"/>
+      <element name="TFBDataSet.QueryDelete"/>
+      <element name="TFBDataSet.AfterRefresh"/>
+      <element name="TFBDataSet.BeforeRefresh"/>
+      <element name="TFBDataSet.AllowedUpdateKinds"/>
+      <element name="TFBDataSet.AutoCommit"/>
+      <element name="TFBDataSet.AutoUpdateOptions"/>
+      <element name="TFBDataSet.DataSource"/>
+      <element name="TFBDataSet.DefaultFormats"/>
+      <element name="TFBDataSet.DetailConditions"/>
+      <element name="TFBDataSet.Filtered"/>
+      <element name="TFBDataSet.CachedUpdates"/>
+      <element name="TFBDataSet.DataBase"/>
+      <element name="TFBDataSet.Description"/>
+      <element name="TFBDataSet.MacroChar"/>
+      <element name="TFBDataSet.Macros"/>
+      <element name="TFBDataSet.MasterScrollBehavior"/>
+      <element name="TFBDataSet.Option"/>
+      <element name="TFBDataSet.RefreshTransactionKind"/>
+      <element name="TFBDataSet.Transaction">
+        <short>Транзакция, в контексте которой выполняются операции с SQL сервером</short>
+        <descr>В контексте данной транзакции выполняются все операции на чтение данных с сервера. Если не установлено свойство <link id="TFBDataSet.UpdateTransaction">UpdateTransaction</link>, то в контесте этой транзакции также выполняются операции модификации данных.</descr>
+        <seealso>
+          <link id="TFBDataSet.UpdateTransaction"/>
+        </seealso>
+      </element>
+      <element name="TFBDataSet.UpdateTransaction"/>
+      <element name="TFBDataSet.UpdateRecordTypes"/>
+      <element name="TFBDataSet.SQLSelect">
+        <short>Запрос на выборку данных</short>
+        <descr>Данное свойство содержит запрос на выборку данных.</descr>
+      </element>
+      <element name="TFBDataSet.SQLRefresh">
+        <short>Запрос на обновление строки данных</short>
+        <descr>Данный набор строк должен содержать запрос на обновление текущей строки данных. Этот запрос выполняется после вызова метода Refresh. Также данный запрос выполняется после выполнения операций модфикации или добавления новых данных (Update и Insert).
+Свойство <link id="TFBDataSet.RefreshTransactionKind">RefreshTransactionKind</link> определяет в контексте какой транзакции будет выполнен данный запрос.</descr>
+      </element>
+      <element name="TFBDataSet.SQLEdit"/>
+      <element name="TFBDataSet.SQLDelete"/>
+      <element name="TFBDataSet.SQLInsert"/>
+      <element name="TFBDataSet.SQLScreenCursor"/>
+      <element name="TFBDataSet.OnUpdateRecord"/>
+      <element name="TFBDataSet.OnUpdateError"/>
+      <element name="TFBDataSet.OnFetchRecord"/>
+      <element name="TFBDataSet.MaxMEMOStringSize"/>
+      <element name="TCacheState"/>
+      <element name="TBlobCacheStream"/>
+      <element name="TBlobCacheStream.Create"/>
+      <element name="TBlobCacheStream.Destroy"/>
+      <element name="TBlobCacheStream.Read"/>
+      <element name="TBlobCacheStream.Write"/>
+      <element name="TBlobCacheStream.Seek"/>
+      <element name="TBlobCacheStream.SetSize"/>
+      <element name="TBlobCacheStream.Modified"/>
+      <element name="TBlobCacheStream.New"/>
+      <element name="TBlobCacheStream.Clone"/>
+      <element name="TBlobCacheStream.Flush">
+        <short>отсылает содержимое на сервер, если оно изменено, обновляет Isc</short>
+        <descr>отсылает содержимое на сервер, если оно изменено, обновляет Isc</descr>
+      </element>
+      <element name="TBlobCacheStream.Refresh">
+        <short>загружает содержимо БЛОБА с сервера</short>
+        <descr>загружает содержимо БЛОБА с сервера</descr>
+      </element>
+      <element name="TBlobCacheStream.OutDate">
+        <short>делает кеш устаревшим</short>
+        <descr>делает кеш устаревшим</descr>
+      </element>
+      <element name="TBlobCacheStream.Change">
+        <short>ускоряет создание кеша - если текущий кеш неразделяем то переинициирует себя и себя же  возвращает, иначе создает новый кеш его и возвращает</short>
+        <descr>ускоряет создание кеша - если текущий кеш неразделяем то переинициирует себя и себя же  возвращает, иначе создает новый кеш его и возвращает</descr>
+      </element>
+      <element name="TBlobCacheStream.ChangeOrNil"/>
+      <element name="TBlobCacheStream.AnsiText"/>
+      <element name="TFBBlobStream"/>
+      <element name="TFBBlobStream.New"/>
+      <element name="TFBAnsiMemoStream"/>
+      <element name="TFBAnsiMemoStream.Create"/>
+      <element name="TFBAnsiMemoStream.Destroy"/>
+      <element name="TFBAnsiMemoStream.New"/>
+      <element name="TFBAnsiMemoStream.Clone"/>
+      <element name="TLostBLOBCacheEvent"/>
+      <element name="SaveCacheList"/>
+      <element name="SaveCacheList.Sort"/>
+      <element name="SaveCacheList.Locate"/>
+      <element name="TSaveCacheList"/>
+      <element name="FBRecordCompare"/>
+      <element name="FBRecordCompareMethod"/>
+      <element name="iRecordComparer"/>
+      <element name="iRecordComparer.Compare"/>
+      <element name="iRecordComparer.Sort"/>
+      <element name="iRecordComparer.Locate"/>
+      <element name="TRecBufStamp"/>
+      <element name="RBIFieldDef"/>
+      <element name="RBITask"/>
+      <element name="TLocalIndex"/>
+      <element name="TRecordsBufferIndex"/>
+      <element name="TRecordsBufferIndex.Name"/>
+      <element name="TRecordsBufferIndex.Definition"/>
+      <element name="TRecordsBufferIndex.SetDefinition"/>
+      <element name="TRecordsBufferIndex.Rebuild"/>
+      <element name="TRecordsBufferIndex.DoFresh"/>
+      <element name="TRecordsBufferIndex.Sort"/>
+      <element name="TRecordsBufferIndex.SearchRec"/>
+      <element name="TRecordsBufferIndex.Locate"/>
+      <element name="TRecordsBufferIndex.LocateRec"/>
+      <element name="TRecordsBufferIndex.Create"/>
+      <element name="TRecordsBufferIndex.Destroy"/>
+      <element name="FBRBICompareContext"/>
+      <element name="RBIDefines"/>
+      <element name="TUniversalRBIndex"/>
+      <element name="TUniversalRBIndex.Create"/>
+      <element name="TUniversalRBIndex.Destroy"/>
+      <element name="TUniversalRBIndex.Rebuild"/>
+      <element name="TUniversalRBIndex.SearchRec"/>
+      <element name="TUniversalRBIndex.LocateRec"/>
+      <element name="DefFBDsOptions"/>
+      <element name="OnLostBLOBCache"/>
+      <element name="EIndexNotFound"/>
+      <element name="EUnsupportedCompare"/>
+    </module>
+    <module name="mydbunit">
+      <element name="EMdDataSetError"/>
+      <element name="EReferencedObjLoose"/>
+      <element name="TCachedUpdateStatus"/>
+      <element name="ArrayOfFields"/>
+      <element name="PBytes"/>
+      <element name="Bytes"/>
+      <element name="PRecordBuffer"/>
+      <element name="PBooleans"/>
+      <element name="Booleans"/>
+      <element name="Pointers"/>
+      <element name="PPointers"/>
+      <element name="AnsiStrings"/>
+      <element name="PAnsiStrings"/>
+      <element name="WideStrings"/>
+      <element name="PWideStrings"/>
+      <element name="DBRecordCalcElement"/>
+      <element name="PDBRecordCalcElement"/>
+      <element name="PStream"/>
+      <element name="TBLOBCache"/>
+      <element name="TBLOBCache.Dereference"/>
+      <element name="TBLOBCache.IncReference"/>
+      <element name="TBLOBCache.IncReference"/>
+      <element name="TBLOBCache.Alone"/>
+      <element name="TBLOBCache.Create"/>
+      <element name="TBLOBCache.Destroy"/>
+      <element name="PBLOBCache"/>
+      <element name="TBLOBIndex"/>
+      <element name="TBLOBListItems"/>
+      <element name="TBLOBList"/>
+      <element name="TBLOBList.SetItem"/>
+      <element name="TBLOBList.Item"/>
+      <element name="TBLOBList.Add"/>
+      <element name="TBLOBList.Count"/>
+      <element name="TBLOBList.Dereference"/>
+      <element name="TBLOBList.IncReference"/>
+      <element name="TBLOBList.Clone"/>
+      <element name="TBLOBList.Init"/>
+      <element name="TBLOBList.Free"/>
+      <element name="TBLOBList.Create"/>
+      <element name="TBLOBList.Destroy"/>
+      <element name="PMyDBInfo"/>
+      <element name="TMyDBInfo"/>
+      <element name="DinamicsEnumSeq"/>
+      <element name="DinamicsEnumeration"/>
+      <element name="MaxDeletedFragment"/>
+      <element name="PField"/>
+      <element name="TField"/>
+      <element name="PFields"/>
+      <element name="TFieldName"/>
+      <element name="TFieldsMap"/>
+      <element name="PFieldsMap"/>
+      <element name="TFieldMapNode"/>
+      <element name="TFieldMapList"/>
+      <element name="TMyDBCustomDataSet"/>
+      <element name="AssignOldBuffer"/>
+      <element name="TMyDBCustomDataSet.AssignOldBuffer"/>
+      <element name="TMyDBCustomDataSet.ReleaseOldBuffer"/>
+      <element name="TMyDBCustomDataSet.ReferenceOldBuffer"/>
+      <element name="TMyDBCustomDataSet.Create"/>
+      <element name="TMyDBCustomDataSet.Destroy"/>
+      <element name="TMyDBCustomDataSet.CompareBookmarks"/>
+      <element name="TMyDBCustomDataSet.GetFieldList"/>
+      <element name="TMyDBCustomDataSet.RegisterMap"/>
+      <element name="TMyDBCustomDataSet.ForgetMap"/>
+      <element name="TMyDBCustomDataSet.FormatInt64"/>
+    </module>
+    <module name="fbmisc">
+      <element name="TFBDsOption">
+        <short>Параметры работы FBDataSet</short>
+        <descr>
+          <table>
+            <th>
+              <td>Параметр</td>
+              <td>Описание</td>
+            </th>
+            <tr>
+              <td>poTrimCharFields</td>
+              <td>обрезать строковые поля</td>
+            </tr>
+            <tr>
+              <td>poRefreshAfterPost</td>
+              <td>после Post пытаться сделать Refresh записи</td>
+            </tr>
+            <tr>
+              <td>poAutoParamsToFields</td>
+              <td>автоматически присвоить при добавлении новой записи значения из параметров</td>
+            </tr>
+            <tr>
+              <td>poFetchAll</td>
+              <td>после открытия набора данных выбирать все данные с сервера</td>
+            </tr>
+            <tr>
+              <td>poFillEmptyEPFromParams</td>
+              <td>при вставке или редактировании записи, если в запросе на вставку или редактирование есть параметры, для которых нет полей в select запросе - то подставить занчения из параметров select запроса</td>
+            </tr>
+            <tr>
+              <td>poRefreshBeforeEdit</td>
+              <td>перед редактированием сделать Refresh для изменения последней копии данных</td>
+            </tr>
+            <tr>
+              <td>poParanoidBLOBRefresh</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>poNotSetDefaultParams</td>
+              <td/>
+            </tr>
+          </table>
+        </descr>
+      </element>
+      <element name="TFBDsOptions">
+        <short>Набор флагов</short>
+      </element>
+      <element name="TUpdateKinds"/>
+      <element name="EFBError"/>
+      <element name="EFB_UIBError"/>
+      <element name="EFB_UIBException"/>
+      <element name="EFB_UIBError.ErrorCode"/>
+      <element name="EFB_UIBError.SQLCode"/>
+      <element name="EFB_UIBError.GDSCode"/>
+      <element name="EFB_UIBError.ComponentName"/>
+      <element name="EFB_UIBException.Number"/>
+      <element name="EFB_UIBException.GDSExceptionText"/>
+      <element name="TFBErrorID"/>
+      <element name="TWhenGetGenID"/>
+      <element name="TTransactionKind"/>
+      <element name="TBFCurrentOperationState"/>
+      <element name="TDefaultFormats"/>
+      <element name="TDefaultFormats.Create"/>
+      <element name="TDefaultFormats.DisplayFormatDateTime"/>
+      <element name="TDefaultFormats.DisplayFormatDate"/>
+      <element name="TDefaultFormats.DisplayFormatTime"/>
+      <element name="TDefaultFormats.DisplayFormatNumeric"/>
+      <element name="TDefaultFormats.DisplayFormatInteger"/>
+      <element name="TDefaultFormats.EditFormatNumeric"/>
+      <element name="TDefaultFormats.EditFormatInteger"/>
+      <element name="TUpdateAction"/>
+      <element name="TUpdateRecordEvent"/>
+      <element name="TUpdateErrorEvent"/>
+      <element name="TFBInternalSortItem"/>
+      <element name="TFBInternalSortArray"/>
+      <element name="TMasterUpdateStatus"/>
+      <element name="TDetailCondition">
+        <descr>
+          <table>
+            <th>
+              <td>Параметр</td>
+              <td>Значение</td>
+            </th>
+            <tr>
+              <td>dcForceOpen</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>dcIgnoreMasterClose</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>dcForceMasterRefresh</td>
+              <td/>
+            </tr>
+          </table>
+
+, ,</descr>
+      </element>
+      <element name="TDetailConditions"/>
+      <element name="TMasterScrollBehavior"/>
+      <element name="DefaultMacroChar"/>
+      <element name="DefaultTermChar"/>
+      <element name="TrueExpr"/>
+      <element name="FBError"/>
+      <element name="FBUIBError"/>
+      <element name="FBErrorStr"/>
+      <element name="QuoteIdentifier"/>
+      <element name="NameDelimiter"/>
+      <element name="IsLiteral"/>
+      <element name="CreateQueryParams"/>
+      <element name="Copy2LineDel"/>
+      <element name="OrderCompareChar0"/>
+      <element name="CompareLeftPrefix"/>
+      <element name="CompareAnsiLeftPrefix"/>
+      <element name="CompareTextLeftPrefix"/>
+      <element name="CompareLeftPrefix"/>
+      <element name="CompareWideLeftPrefix"/>
+      <element name="CompareWideTextLeftPrefix"/>
+      <element name="ComparePrefix"/>
+      <element name="CompareAnsiPrefix"/>
+      <element name="CompareTextPrefix"/>
+      <element name="ComparePrefix"/>
+      <element name="CompareAnsiPrefix"/>
+      <element name="CompareWidePrefix"/>
+      <element name="CompareWideTextPrefix"/>
+      <element name="DataSetLocateThrough"/>
+    </module>
+    <module name="fbparams">
+      <element name="TFBParam"/>
+      <element name="TFBParams"/>
+      <element name="TFBParam.GetDisplayName"/>
+      <element name="TFBParam.Create"/>
+      <element name="TFBParam.Assign"/>
+      <element name="TFBParam.AssignParam"/>
+      <element name="TFBParam.Name"/>
+      <element name="TFBParam.Value"/>
+      <element name="TFBParams.AssignTo"/>
+      <element name="TFBParams.Create"/>
+      <element name="TFBParams.AssignValues"/>
+      <element name="TFBParams.ParamByName"/>
+      <element name="TFBParams.FindParam"/>
+      <element name="TFBParams.CreateParam"/>
+      <element name="TFBParams.Items"/>
+      <element name="TFBParams.ParamValues"/>
+      <element name="TFBParams.GetParamList"/>
+    </module>
+    <short>Пакет предоставляет компоненты доступа к базам данных FireBird и Interbase</short>
+    <descr>Пакет предоставляет компоненты доступа к базам данных FireBird и Interbase</descr>
+  </package>
+  <package name="dcl_fb_id_dataset">
+    <short>Пакет содержит редакторы для компонентов из пакета FBDataSet</short>
+    <descr>Пакет содержит редакторы для компонентов из пакета FBDataSet</descr>
+    <module name="fb_ib_edt_ins_master_field_unit"/>
+    <module name="fbcustomdatasetpropeditorl"/>
+    <module name="fbcustomdatasetautoupdateoptionseditorl">
+      <element name="TFBCustomDataSetAutoUpdateOptionsEditorForm"/>
+      <short>Модуль содержит</short>
+    </module>
+    <module name="fbcustomdatasetsqleditorl"/>
+    <module name="FBCustomDataSetSQLEditorTestL">
+      <element name="TFBCustomDataSetSQLEditorTestForm">
+        <short>Компонент представляет форму отображения результата выполнения запроса, написанного в редакторе компоненты FBDataSet</short>
+        <descr>Компонент представляет форму отображения результата выполнения запроса, написанного в редакторе компоненты FBDataSet</descr>
+      </element>
+      <short>Мдуль содержит форму отображения результат работы запроса, написанного в редакторе компоненты FBDataSet</short>
+      <descr>Мдуль содержит форму отображения результат работы запроса, написанного в редакторе компоненты FBDataSet</descr>
+    </module>
+    <module name="dcl_fb_id_StrConsts">
+      <short>Модуль dcl_fb_id_StrConsts содержис троковые константы</short>
+      <descr>Модуль dcl_fb_id_StrConsts содержис троковые константы, используемые для локализации всех сообщений и интерфейсных эелментов пакета</descr>
+    </module>
+  </package>
+  <package name="uibeditors">
+    <short>Пакет содержит редакторы для компонентов из пакета UIB</short>
+    <descr>Пакет содержит редакторы для компонентов из пакета UIB</descr>
+    <module name="jvuibdatabaseedit">
+      <short>Модуль содержит форму редактирования строки подключения к БД</short>
+      <descr>Модуль содержит форму редактирования строки подключения к БД</descr>
+    </module>
+    <module name="jvuibtransactionedit">
+      <short>Модуль содержит форму редактирования параметров транзакции</short>
+      <descr>Модуль содержит форму редактирования параметров транзакции</descr>
+    </module>
+  </package>
+  <package name="TFBCustomDataSetSQLEditorTestForm"/>
+</fpdoc-descriptions>

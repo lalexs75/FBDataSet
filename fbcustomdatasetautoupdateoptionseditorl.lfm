@@ -1,0 +1,151 @@
+object FBCustomDataSetAutoUpdateOptionsEditorForm: TFBCustomDataSetAutoUpdateOptionsEditorForm
+  Left = 381
+  Height = 255
+  Top = 260
+  Width = 635
+  ActiveControl = ComboBox1
+  Caption = 'Auto update options'
+  ClientHeight = 255
+  ClientWidth = 635
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.9.0.0'
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 6
+    Height = 17
+    Top = 6
+    Width = 77
+    BorderSpacing.Around = 6
+    Caption = 'Updated field'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = ComboBox1
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 17
+    Top = 62
+    Width = 94
+    BorderSpacing.Around = 6
+    Caption = 'Generator name'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = ComboBox2
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 17
+    Top = 120
+    Width = 75
+    BorderSpacing.Around = 6
+    Caption = 'Increment by'
+    ParentColor = False
+  end
+  object ComboBox1: TComboBox
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = RadioGroup1
+    Left = 12
+    Height = 27
+    Top = 29
+    Width = 388
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    ItemHeight = 0
+    TabOrder = 0
+  end
+  object ComboBox2: TComboBox
+    AnchorSideLeft.Control = Label2
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = RadioGroup1
+    Left = 12
+    Height = 29
+    Top = 85
+    Width = 388
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 6
+    ItemHeight = 0
+    Style = csDropDownList
+    TabOrder = 1
+  end
+  object RadioGroup1: TRadioGroup
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ButtonPanel1
+    Left = 406
+    Height = 202
+    Top = 6
+    Width = 223
+    Anchors = [akTop, akRight, akBottom]
+    AutoFill = True
+    BorderSpacing.Around = 6
+    Caption = 'Update action'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 183
+    ClientWidth = 219
+    Items.Strings = (
+      'wgNever'
+      'wgOnNewRecord'
+      'wgBeforePost'
+    )
+    TabOrder = 2
+    TabStop = True
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 35
+    Top = 214
+    Width = 623
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 3
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+  end
+  object SpinEdit1: TSpinEdit
+    AnchorSideLeft.Control = Label3
+    AnchorSideTop.Control = Label3
+    AnchorSideTop.Side = asrBottom
+    Left = 12
+    Height = 27
+    Top = 143
+    Width = 148
+    BorderSpacing.Around = 6
+    TabOrder = 4
+  end
+  object UIBQuery1: TUIBQuery
+    SQL.Strings = (
+      'SELECT'
+      '  RDB$GENERATOR_NAME'
+      'FROM'
+      '  RDB$GENERATORS'
+      'WHERE'
+      '    (RDB$SYSTEM_FLAG = 0)'
+      '  OR'
+      '    (RDB$SYSTEM_FLAG is NULL)'
+      'order by'
+      '  RDB$GENERATOR_NAME'
+    )
+    Left = 8
+    Top = 8
+  end
+end
