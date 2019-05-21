@@ -11,7 +11,7 @@ object FBCustomDataSetSQLEditor: TFBCustomDataSetSQLEditor
   OnShow = FormShow
   Position = poDesktopCenter
   ShowHint = True
-  LCLVersion = '1.9.0.0'
+  LCLVersion = '2.1.0.0'
   object ButtonPanel1: TButtonPanel
     Left = 6
     Height = 46
@@ -49,7 +49,7 @@ object FBCustomDataSetSQLEditor: TFBCustomDataSetSQLEditor
       Left = 97
       Height = 43
       Top = 0
-      Width = 59
+      Width = 61
       Anchors = [akTop, akLeft, akBottom]
       AutoSize = True
       BorderSpacing.Left = 6
@@ -65,7 +65,7 @@ object FBCustomDataSetSQLEditor: TFBCustomDataSetSQLEditor
       Left = 6
       Height = 43
       Top = 0
-      Width = 77
+      Width = 80
       Anchors = [akTop, akLeft, akBottom]
       AutoSize = True
       BorderSpacing.Left = 6
@@ -3431,7 +3431,7 @@ object FBCustomDataSetSQLEditor: TFBCustomDataSetSQLEditor
           Left = 6
           Height = 17
           Top = 6
-          Width = 59
+          Width = 64
           BorderSpacing.Around = 6
           Caption = 'Table alias'
           ParentColor = False
@@ -3457,7 +3457,7 @@ object FBCustomDataSetSQLEditor: TFBCustomDataSetSQLEditor
           Left = 6
           Height = 23
           Top = 69
-          Width = 99
+          Width = 103
           BorderSpacing.Around = 6
           Caption = 'Replace SQL'
           TabOrder = 1
@@ -3469,7 +3469,7 @@ object FBCustomDataSetSQLEditor: TFBCustomDataSetSQLEditor
           Left = 6
           Height = 23
           Top = 98
-          Width = 56
+          Width = 58
           BorderSpacing.Around = 6
           Caption = 'Filter'
           OnClick = CheckBox2Click
@@ -3480,11 +3480,11 @@ object FBCustomDataSetSQLEditor: TFBCustomDataSetSQLEditor
           AnchorSideLeft.Side = asrBottom
           AnchorSideTop.Control = Edit1
           AnchorSideTop.Side = asrBottom
-          Left = 111
+          Left = 115
           Height = 23
           Hint = 'Show field info'
           Top = 69
-          Width = 86
+          Width = 87
           BorderSpacing.Around = 6
           Caption = 'Show info'
           Checked = True

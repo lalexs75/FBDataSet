@@ -1,29 +1,29 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Package Version="3">
+  <Package Version="4">
     <Name Value="dcl_fb_id_dataset"/>
+    <Type Value="DesignTime"/>
+    <AddToProjectUsesSection Value="True"/>
     <Author Value="Lagunov A.A."/>
     <CompilerOptions>
-      <Version Value="8"/>
+      <Version Value="11"/>
       <SearchPaths>
-        <IncludeFiles Value="$(LazarusDir)/components/FBDataSet/lazarus/"/>
-        <OtherUnitFiles Value="$(LazarusDir)/ideintf/units/$(TargetCPU)-$(TargetOS)/"/>
+        <IncludeFiles Value="$(LazarusDir)/components/FBDataSet/lazarus"/>
+        <OtherUnitFiles Value="$(LazarusDir)/ideintf/units/$(TargetCPU)-$(TargetOS)"/>
         <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
       <Parsing>
         <SyntaxOptions>
           <CStyleOperator Value="False"/>
+          <UseAnsiStrings Value="False"/>
         </SyntaxOptions>
       </Parsing>
-      <Other>
-        <CompilerPath Value="$(CompPath)"/>
-      </Other>
     </CompilerOptions>
     <Description Value="designer package for FBDataSet
 "/>
     <License Value="MPL
 "/>
-    <Version Major="1" Build="1"/>
+    <Version Major="1" Release="1" Build="3"/>
     <Files Count="11">
       <Item1>
         <Filename Value="fb_ib_edt_ins_master_field_unit.lfm"/>
@@ -75,7 +75,6 @@
       <EnableI18N Value="True"/>
       <OutDir Value="languages"/>
     </i18n>
-    <Type Value="DesignTime"/>
     <RequiredPkgs Count="7">
       <Item1>
         <PackageName Value="SynEdit"/>
@@ -101,11 +100,10 @@
       </Item7>
     </RequiredPkgs>
     <UsageOptions>
-      <UnitPath Value="$(PkgOutDir)/"/>
+      <UnitPath Value="$(PkgOutDir)"/>
     </UsageOptions>
     <PublishOptions>
       <Version Value="2"/>
-      <IgnoreBinaries Value="False"/>
     </PublishOptions>
   </Package>
 </CONFIG>

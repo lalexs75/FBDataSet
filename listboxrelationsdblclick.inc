@@ -156,6 +156,7 @@ begin
       FBCustomDataSetSQLEditorTestForm.FBDataSetTest.DataBase:=FDS.DataBase;
       FBCustomDataSetSQLEditorTestForm.FBDataSetTest.Transaction:=FDS.Transaction;
       FBCustomDataSetSQLEditorTestForm.FBDataSetTest.SQLSelect.Text:=ActiveEditor.Lines.Text;
+      FBCustomDataSetSQLEditorTestForm.FBDataSetTest.DefaultFormats.Assign(FDS.DefaultFormats);
       FBCustomDataSetSQLEditorTestForm.FBDataSetTest.Open;
       FBCustomDataSetSQLEditorTestForm.SynEdit1.Text:=FBCustomDataSetSQLEditorTestForm.FBDataSetTest.QuerySelect.Plan;
       FBCustomDataSetSQLEditorTestForm.SynEdit1.Highlighter:=SynSQLSyn1;
@@ -168,5 +169,4 @@ begin
     FBCustomDataSetSQLEditorTestForm.Free
   end;
 end;
-
 

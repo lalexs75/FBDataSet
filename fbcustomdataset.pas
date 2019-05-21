@@ -2122,13 +2122,13 @@ begin
             FieldHeader.FieldType:=ftLargeint;
             FOfs:=FOfs+SizeOf(Largeint);
           end;
-        {$IFDEF IB7_UP}
+        {.$IFDEF IB7_UP}
         uftBoolean:
           begin
             FieldHeader.FieldType:=ftBoolean;
             FOfs:=FOfs+SizeOf(Boolean);
           end;
-        {$ENDIF}
+        {.$ENDIF}
       else
         FieldHeader.FieldType:=ftUnknown;
       end;
