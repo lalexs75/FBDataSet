@@ -1374,7 +1374,9 @@ begin
           uftInt64:PDest.ByNameAsInt64[S]:=PSrc.AsInt64[i];
 
           uftArray:;
-          {$IFDEF IB7_UP}, uftBoolean{$ENDIF}
+          {$IFDEF IB7_UP}
+          uftBoolean:PDest.ByNameAsBoolean[S]:=PSrc.AsBoolean[i];
+          {$ENDIF}
           {$IFDEF FB25_UP}, uftNull{$ENDIF}
         else
           //uftUnKnown:;

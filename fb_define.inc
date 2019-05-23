@@ -57,3 +57,4 @@
 {$endif}
 
 {$ENDIF}
+{$DEFINE IB7_UP}
