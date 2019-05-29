@@ -2353,8 +2353,10 @@ begin
     end;
     
     try
-      UIBQuery.Execute;
-      UIBQuery.Next;
+//      UIBQuery.Execute;
+//      UIBQuery.Next;
+      UIBQuery.Open;
+//      UIBQuery.Next;
       FRecordsBuffer.RefreshRecordFromQuery(FCurrentRecord, UIBQuery);
     finally
       UIBQuery.Close;
