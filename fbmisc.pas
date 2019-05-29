@@ -121,8 +121,8 @@ type
 
 {$IFDEF FPC}
   TUpdateAction = (uaFail, uaAbort, uaSkip, uaRetry, uaApplied);
-  TUpdateRecordEvent = procedure(DataSet: TDataSet; UpdateKind: TUpdateKind;
-    var UpdateAction: TUpdateAction) of object;
+  TUpdateRecordEvent = procedure(DataSet: TDataSet; AUpdateKind: TUpdateKind;
+    var AUpdateAction: TUpdateAction) of object;
   TUpdateErrorEvent = procedure(DataSet: TDataSet; E: EDatabaseError;
     UpdateKind: TUpdateKind; var UpdateAction: TUpdateAction) of object;
 {$ENDIF}

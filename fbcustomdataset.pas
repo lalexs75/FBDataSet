@@ -2363,6 +2363,7 @@ begin
 end;
 
 procedure TFBCustomDataSet.InternalSaveRecord(const Q:TUIBQuery; FBuff: PChar);
+
 var
   i, L:integer;
   F:TField;
@@ -2370,7 +2371,24 @@ var
   S, S1:string;
   SourceRec : PRecordBuffer absolute FBuff;
   FOldRec:boolean;
+  FUpdateAction: TUpdateAction;
+  UpdateKind: TUpdateKind;
 begin
+  if Assigned(FOnUpdateRecord) then
+  begin
+    case State of
+      dsEdit: UpdateKind := ukModify;
+      dsInsert: UpdateKind := ukInsert;
+    else
+      FBError(fbeEmptySQLEdit, [Self.Name+'.'+Q.Name]);
+    end;
+
+    FUpdateAction := uaFail;
+    FOnUpdateRecord(Self, UpdateKind, FUpdateAction);
+
+    if FUpdateAction = uaApplied then Exit;
+  end;
+
   if Trim(Q.SQL.Text)='' then
     FBError(fbeEmptySQLEdit, [Self.Name+'.'+Q.Name]);
   try
