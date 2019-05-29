@@ -2,7 +2,15 @@
 <fpdoc-descriptions><package name="fbdemofpc"><module name="fbmisc"><element name="TFBDsOption"><short>Параметры работы компоненты FBDataSet</short>
       </element><element name="TFBDsOption.poRefreshAfterPost"><short>После сохранения изменений перечитываем данные из БД</short>
       </element><element name="TFBDsOption.poTrimCharFields"><short>Обрезать незначащие пробелы в строковых полях</short>
-      </element><element name="TFBDsOption.poFillEmptyEPFromParams"><short>При сохранении данных если нет соотвествующего поля в запросе то брать значение из параметра</short><descr>При сохранении данных если нет соотвествующего поля в запросе то брать значение из параметра</descr>
+      </element><element name="TFBDsOption.poFillEmptyEPFromParams"><short>При сохранении данных если нет соотвествующего поля в запросе то брать значение из параметра</short><descr>При сохранении данных если нет соотвествующего поля в запросе то брать значение из параметра
+</descr>
+      </element>
+    <element name="TFBDsOption.poFetchAll"><short>После открытия запроса выбирать все данные с сервера</short>
+      </element><element name="TFBDsOption.poRefreshBeforeEdit"><short>Обновить данные с сервера перед началом редактирования</short>
+      </element><element name="TWhenGetGenID"><short>Определяем момент генерации значения первичного ключа</short>
+      </element><element name="TWhenGetGenID.wgNever"><short>Никогда не генерировать значение первичного ключа</short>
+      </element><element name="TWhenGetGenID.wgOnNewRecord"><short>Генерировать значение превичного ключа при создании новой записи</short>
+      </element><element name="TWhenGetGenID.wgBeforePost"><short>Генерировать значение превичного ключа при сохранении данные</short>
       </element>
     </module>
   </package>
