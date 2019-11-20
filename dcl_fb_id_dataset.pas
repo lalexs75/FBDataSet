@@ -10,7 +10,8 @@ interface
 uses
   fb_ib_edt_ins_master_field_unit, fbcustomdatasetpropeditorl, 
   fbcustomdatasetautoupdateoptionseditorl, fbcustomdatasetsqleditorl, 
-  FBCustomDataSetSQLEditorTestL, dcl_fb_id_StrConsts, LazarusPackageIntf;
+  FBCustomDataSetSQLEditorTestL, dcl_fb_id_StrConsts, dclFBDataSetUtils, 
+  LazarusPackageIntf;
 
 implementation
 

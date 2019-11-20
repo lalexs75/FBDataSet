@@ -54,37 +54,37 @@ begin
               Lines.Add('  *');
               Lines.Add('from');
               if Edit1.Text<> '' then
-                Lines.Add('  ' + ListBoxRelations.Items[ListBoxRelations.ItemIndex] + ' ' + Edit1.Text)
+                Lines.Add('  ' + DoQuoteName(ListBoxRelations.Items[ListBoxRelations.ItemIndex]) + ' ' + Edit1.Text)
               else
-                Lines.Add('  ' + ListBoxRelations.Items[ListBoxRelations.ItemIndex]);
+                Lines.Add('  ' + DoQuoteName(ListBoxRelations.Items[ListBoxRelations.ItemIndex]));
             end
             else
             begin
               Lines.Add('select');
               if Edit1.Text <> '' then
-                Als := Edit1.Text
+                Als := DoQuoteName(Edit1.Text)
               else
-                Als := ListBoxRelations.Items[ListBoxRelations.ItemIndex];
+                Als := DoQuoteName(ListBoxRelations.Items[ListBoxRelations.ItemIndex]);
               FieldsStr := '';
               for i := 0 to ListBoxFields.Items.Count - 1 do
               begin
                 if ListBoxFields.Selected[i] then
                 begin
                   if FieldsStr <> '' then Lines.Add(FieldsStr + ',');
-                  FieldsStr := '  ' + Als + '.' + ListBoxFields.Items[i];
+                  FieldsStr := '  ' + Als + '.' + DoQuoteName(ListBoxFields.Items[i]);
                 end;
               end;
               if FieldsStr <> '' then Lines.Add(FieldsStr);
               Lines.Add('from');
               if Als <> ListBoxRelations.Items[ListBoxRelations.ItemIndex] then
-                Lines.Add('  ' + ListBoxRelations.Items[ListBoxRelations.ItemIndex] + ' ' + Als)
+                Lines.Add('  ' + DoQuoteName(ListBoxRelations.Items[ListBoxRelations.ItemIndex]) + ' ' + Als)
               else
-                Lines.Add('  ' + ListBoxRelations.Items[ListBoxRelations.ItemIndex]);
+                Lines.Add('  ' + DoQuoteName(ListBoxRelations.Items[ListBoxRelations.ItemIndex]));
             end;
           end;
         1:begin
             Lines.clear;
-            Lines.Add('insert into ' + ListBoxRelations.Items[ListBoxRelations.ItemIndex]);
+            Lines.Add('insert into ' + DoQuoteName(ListBoxRelations.Items[ListBoxRelations.ItemIndex]));
 
             if ListBoxFields.SelCount > 0 then
             begin
@@ -94,8 +94,8 @@ begin
               begin
                 if ListBoxFields.Selected[i] then
                 begin
-                  S_FIELD:=S_FIELD + ListBoxFields.Items[i] + ', ';
-                  S_VAL:=S_VAL + ':'+ ListBoxFields.Items[i] + ', ';
+                  S_FIELD:=S_FIELD + DoQuoteName(ListBoxFields.Items[i]) + ', ';
+                  S_VAL:=S_VAL + ':'+ DoQuoteName(ListBoxFields.Items[i]) + ', ';
                 end;
               end;
               S_FIELD:=Copy(S_FIELD, 1, Length(S_FIELD) - 2);
@@ -111,15 +111,15 @@ begin
               if ListBoxFields.Items.Count - 1 > 0 then
               begin
                 for i := 1 to ListBoxFields.Items.Count - 1 do
-                  tmp := tmp + ', ' + ListBoxFields.Items[i];
+                  tmp := tmp + ', ' + DoQuoteName(ListBoxFields.Items[i]);
               end;
               tmp := '(' + tmp + ')';
               Lines.Add(tmp);
-              Tmp := ':' + ListBoxFields.Items[0];
+              Tmp := ':' + DoQuoteName(ListBoxFields.Items[0]);
               if ListBoxFields.Items.Count - 1 > 0 then
               begin
                 for i := 1 to ListBoxFields.Items.Count - 1 do
-                  tmp := tmp + ', ' + ':' + ListBoxFields.Items[i];
+                  tmp := tmp + ', ' + ':' + DoQuoteName(ListBoxFields.Items[i]);
               end;
               tmp := 'values (' + tmp + ')';
               Lines.Add(tmp);
@@ -130,7 +130,7 @@ begin
             Lines.clear;
             Lines.Add('delete');
             Lines.Add('from');
-            Lines.Add('  '+ListBoxRelations.Items[ListBoxRelations.ItemIndex]);
+            Lines.Add('  '+DoQuoteName(ListBoxRelations.Items[ListBoxRelations.ItemIndex]));
             GenerateWhereSQLText(ListBoxRelations.Items[ListBoxRelations.ItemIndex]);
             end;
         4:begin
@@ -138,7 +138,7 @@ begin
             Lines.Add('select');
             Lines.Add('  *');
             Lines.Add('from');
-            Lines.Add('  ' +ListBoxRelations.Items[ListBoxRelations.ItemIndex]);
+            Lines.Add('  ' +DoQuoteName(ListBoxRelations.Items[ListBoxRelations.ItemIndex]));
             GenerateWhereSQLText(ListBoxRelations.Items[ListBoxRelations.ItemIndex]);
           end;
       end;

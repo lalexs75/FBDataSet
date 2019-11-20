@@ -123,7 +123,7 @@ var
   FBCustomDataSetSQLEditor: TFBCustomDataSetSQLEditor;
 
 implementation
-uses fbcustomdatasetsqleditortestl, fb_ib_edt_ins_master_field_unit,
+uses fbcustomdatasetsqleditortestl, fb_ib_edt_ins_master_field_unit, dclFBDataSetUtils,
   SynEditTypes, LazIDEIntf, IniFiles, dcl_fb_id_StrConsts, LCLProc;
 
 {$R *.lfm}
@@ -596,7 +596,7 @@ begin
 
   ActiveEditor.Lines.clear;
   ActiveEditor.Lines.Add('update');
-  ActiveEditor.Lines.Add('  '+FTableName);
+  ActiveEditor.Lines.Add('  '+ DoQuoteName(FTableName));
   ActiveEditor.Lines.Add('set ');
   Cnt := 0;
   for i := 1 to ListBoxFields.Items.Count - 1 do
@@ -604,8 +604,7 @@ begin
     P:=ListBoxFields.Items.Objects[i] as TFieldInfo;
     if (ListBoxFields.Selected[i]) and (not P.CalcField) then
     begin
-      FieldsStr :='  ' + FTableName +'.' + ListBoxFields.Items[i] + ' = :' +
-        ListBoxFields.Items[i];
+      FieldsStr :='  ' + {FTableName +'.' + }DoQuoteName(ListBoxFields.Items[i]) + ' = :' + DoQuoteName(ListBoxFields.Items[i]);
       if Cnt>0 then
         ActiveEditor.Lines[ActiveEditor.Lines.Count-1]:=ActiveEditor.Lines[ActiveEditor.Lines.Count-1] +',';
       ActiveEditor.Lines.Add(FieldsStr);
@@ -619,8 +618,7 @@ begin
       P:=ListBoxFields.Items.Objects[i] as TFieldInfo;
       if not P.CalcField then
       begin
-        FieldsStr :='  ' + FTableName + '.' + ListBoxFields.Items[i] + ' = :' +
-        ListBoxFields.Items[i];
+        FieldsStr :='  ' + DoQuoteName(FTableName) + '.' + DoQuoteName(ListBoxFields.Items[i]) + ' = :' + DoQuoteName(ListBoxFields.Items[i]);
         if Cnt>0 then
           ActiveEditor.Lines[ActiveEditor.Lines.Count-1]:=ActiveEditor.Lines[ActiveEditor.Lines.Count-1] +',';
         ActiveEditor.Lines.Add(FieldsStr);
@@ -656,7 +654,7 @@ begin
       if quGetPKFields.Fields.CurrentRecord > 0 then
         ActiveEditor.Lines.Add('  and');
 
-      ActiveEditor.Lines.Add(SPrefix + FTableName +'.'+ FieldsStr + ' = :'+FieldsStr);
+      ActiveEditor.Lines.Add(SPrefix + DoQuoteName(FTableName) +'.'+ DoQuoteName(FieldsStr) + ' = :'+DoQuoteName(FieldsStr));
       quGetPKFields.Fields.Next;
     end;
     quGetPKFields.Close;
