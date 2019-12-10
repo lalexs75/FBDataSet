@@ -2382,7 +2382,10 @@ begin
       dsEdit: UpdateKind := ukModify;
       dsInsert: UpdateKind := ukInsert;
     else
-      FBError(fbeEmptySQLEdit, [Self.Name+'.'+Q.Name]);
+      if Q = FQueryDelete then
+        UpdateKind := ukDelete
+      else
+        FBError(fbeEmptySQLEdit, [Self.Name+'.'+Q.Name]);
     end;
 
     FUpdateAction := uaFail;
